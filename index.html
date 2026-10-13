@@ -1,26 +1,299 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Universo MLKD</title>
-<meta name="description" content="Universo MLKD: o MLKD RPG no Telegram e o MLKD Survivor no Android. Jogos de Valdoria feitos com a comunidade.">
-<style>:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#0d0b0a;color:#ece2c8;font:16px/1.6 system-ui,sans-serif}
-main{max-width:760px;margin:0 auto;padding:24px 16px 48px}a{color:#8ac8ff}.m{color:#a8997f;font-size:14px}nav a{margin-right:16px}
-header{text-align:center;padding:28px 0 8px}header h1{color:#f2c14e;font-size:34px;letter-spacing:2px;margin:0}header p{margin:6px 0 0;color:#cbbd9c}
-.card{background:#1a1714;border:2px solid #5e4024;border-radius:6px;padding:20px;margin-top:24px}.card h2{color:#e0a850;font-size:22px;margin:0 0 6px}
-.card.rpg{border-color:#e0a850}.card.sv{border-color:#ff9a3a}.card.com{border-color:#7fe05a}
-.pix{image-rendering:pixelated;display:block;margin:0 auto 10px;max-width:100%;height:auto}
-.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.btn{display:inline-block;padding:10px 16px;border:2px solid #e0a850;border-radius:4px;background:#2b2622;color:#f2c14e;text-decoration:none;font-weight:700}
-.btn.g{border-color:#7fe05a;color:#9af06a}.btn.b{border-color:#8ac8ff;color:#8ac8ff}footer{margin-top:32px;text-align:center}</style></head>
-<body><main><nav class="m"><a href="index.html">Universo MLKD</a><a href="privacidade.html">Privacidade</a><a href="termos.html">Termos de Uso</a><a href="excluir-dados.html">Excluir dados</a></nav>
-<header><h1>UNIVERSO MLKD</h1><p>Os jogos de Valdoria, feitos junto com a comunidade.</p></header>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Universo MLKD — Os jogos de Valdória</title>
+<meta name="description" content="Universo MLKD: um mundo, várias aventuras. Jogue o MLKD RPG no Telegram e o MLKD Survivor no Android — os mesmos heróis e monstros de Valdória, feitos junto com a comunidade.">
+<meta name="theme-color" content="#0b0910">
+<link rel="canonical" href="https://mlkd.com.br/">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Universo MLKD">
+<meta property="og:title" content="Universo MLKD — Os jogos de Valdória">
+<meta property="og:description" content="MLKD RPG no Telegram e MLKD Survivor no Android. Um mundo, várias aventuras.">
+<meta property="og:image" content="https://mlkd.com.br/assets/img/og-universo.jpg">
+<meta property="og:url" content="https://mlkd.com.br/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700;800&family=Pixelify+Sans:wght@500;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/hero-valdoria.webp">
+<link rel="preload" as="image" href="assets/img/logo-universo.webp">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Universo MLKD","url":"https://mlkd.com.br/","logo":"https://mlkd.com.br/assets/img/logo-universo.png","email":"weslleyfeltrin@gmail.com","sameAs":["https://t.me/mlkd_rpg_bot"]}
+</script>
+</head>
+<body>
+<a class="skip" href="#jogos">Pular para os jogos</a>
 
-<section class="card sv"><img class="pix" src="img/survivor-logo.png" width="225" height="225" alt="Logo do MLKD Survivor">
-<h2>MLKD Survivor</h2><p>Sobreviva a hordas de monstros em pixel art: você só controla o movimento e o herói ataca sozinho. Escolha cartas de poder, evolua armas e chegue ao chefe de cada mapa. Sete mapas, Pesadelo, Corrida do Ouro e a Torre de Valdoria com ranking.</p>
-<div class="btns"><a class="btn" href="https://play.google.com/store/apps/details?id=com.mlkdrpg.survivor">Baixar na Google Play</a></div>
-<p class="m">Android · <a href="privacidade.html">Privacidade</a> · <a href="termos.html">Termos</a> · <a href="excluir-dados.html">Excluir dados</a></p></section>
+<header class="nav" id="topo">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Universo MLKD — início"><img class="brand-mark" src="assets/img/logo-universo-sm.webp" alt="" width="46" height="46"><span class="brand-text"><small>Universo</small><b>MLKD</b></span></a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#jogos">Jogos</a>
+      <a href="rpg/">MLKD RPG</a>
+      <a href="survivor/">MLKD Survivor</a>
+      <a href="#valdoria">Valdória</a>
+      <a href="#classe">Qual sua classe?</a>
+      <a href="#comunidade">Comunidade</a>
+    </nav>
+  </div>
+</header>
 
-<section class="card rpg"><img class="pix" src="img/herois-rpg.png" width="325" height="70" alt="Heróis do MLKD RPG">
-<h2>MLKD RPG</h2><p>O RPG de Valdoria dentro do Telegram: crie seu herói, suba de nível, explore mapas e masmorras, lute na Arena e nas guerras de guilda. Quem chega ao nível 10 ganha o Rei Caído, classe exclusiva do MLKD Survivor.</p>
-<div class="btns"><a class="btn" href="https://t.me/mlkd_rpg_bot">Jogar no Telegram</a></div></section>
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-label="Universo MLKD">
+    <div class="hero-bg" style="background-image:url('assets/img/hero-valdoria.webp')"></div>
+    <canvas id="embers" data-palette="#f2c14e,#ff8a3d,#a66bff,#c79bff"></canvas>
+    <div class="wrap">
+      <img class="hero-logo reveal" src="assets/img/logo-universo.webp" alt="MLKD Universe" width="720" height="713" fetchpriority="high">
+      <div class="eyebrow reveal">Bem-vindo a Valdória</div>
+      <h1 class="reveal d1">Um mundo.<br>Muitas aventuras.</h1>
+      <p class="lead reveal d2">O Universo MLKD é feito de jogos diferentes que compartilham o mesmo mundo, os mesmos heróis e os mesmos monstros. Escolha como quer viver a sua lenda.</p>
+      <div class="btn-row reveal d3">
+        <a class="btn" href="#jogos">Conhecer os jogos</a>
+        <a class="btn ghost" href="#valdoria">A história de Valdória</a>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">Role</div>
+  </section>
 
-<section class="card com"><h2>Comunidade MLKD</h2><p>Novidades, eventos, sugestões e conversa com quem joga. Os mercenários do MLKD Survivor são jogadores de verdade da comunidade.</p>
-<div class="btns"><a class="btn g" href="https://t.me/+ZDF2BIHxdO0zZjNh">Entrar na comunidade</a></div></section>
+  <!-- ============ JOGOS ============ -->
+  <section id="jogos">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="divider"></div>
+        <h2>Escolha sua aventura</h2>
+        <p>Dois jogos, dois estilos, o mesmo universo. O que você conquista em um pode abrir portas no outro.</p>
+      </div>
 
-<footer class="m">Contato: <a href="mailto:weslleyfeltrin@gmail.com">weslleyfeltrin@gmail.com</a></footer></main></body></html>
+      <div class="portals">
+        <article class="portal rpg reveal" data-tilt>
+          <div class="portal-art">
+            <img src="assets/img/rpg-classes.webp" alt="Heróis do MLKD RPG: guerreiro, arqueira, monge e mago" width="1000" height="625" loading="lazy">
+            <img class="logo" src="assets/img/logo-rpg.webp" alt="" width="130" height="130" loading="lazy">
+          </div>
+          <div class="portal-body">
+            <div class="portal-meta"><span class="tag live">Jogue agora</span><span class="tag">Telegram</span><span class="tag">Grátis</span></div>
+            <h3>MLKD RPG</h3>
+            <p>Um RPG completo dentro do Telegram, sem instalar nada. Cace, forje, entre numa guilda e suba a Torre Infinita até onde a coragem aguentar.</p>
+            <ul>
+              <li>6 classes, 12 subclasses e evolução até o nível 90</li>
+              <li>Arena PvP ranqueada, Guerra de Guildas e bosses mundiais</li>
+              <li>Pets, forja lendária, relíquias e a Dimensão do Nexus</li>
+            </ul>
+            <div class="btn-row">
+              <a class="btn tg" href="https://t.me/mlkd_rpg_bot" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.8 15.6 9.4 21c.6 0 .9-.3 1.2-.6l2.9-2.8 6 4.4c1.1.6 1.9.3 2.2-1L24 3.6c.4-1.6-.6-2.3-1.7-1.9L1 10.3c-1.6.6-1.6 1.5-.3 1.9l5.6 1.7L19.4 5.8c.6-.4 1.2-.2.7.3"/></svg>
+                Jogar no Telegram</a>
+              <a class="btn ghost" href="rpg/">Conhecer o RPG</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="portal sv reveal d1" data-tilt>
+          <div class="portal-art">
+            <img class="pixel" src="assets/img/survivor-destaque.webp" alt="MLKD Survivor: herói cercado por hordas de monstros em pixel art" width="1024" height="500" loading="lazy">
+          </div>
+          <div class="portal-body">
+            <div class="portal-meta"><span class="tag soon">Em breve</span><span class="tag">Android</span><span class="tag">Grátis</span></div>
+            <h3>MLKD Survivor</h3>
+            <p>Sobreviva a hordas de monstros de Valdória em partidas rápidas de pixel art. Você só se move — o herói ataca sozinho. Escolha cartas, evolua armas e derrube o chefe do mapa.</p>
+            <ul>
+              <li>7 classes, 7 mapas e uma Torre infinita com ranking online</li>
+              <li>Joga com uma mão só, até sem internet</li>
+              <li>Sem caixa de sorteio paga: dá para jogar tudo de graça</li>
+            </ul>
+            <div class="btn-row">
+              <span class="btn ember disabled" aria-disabled="true">Em breve na Google Play</span>
+              <a class="btn ghost" href="survivor/">Conhecer o Survivor</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ UNIVERSO CONECTADO ============ -->
+  <section id="universo" style="background:linear-gradient(180deg,transparent,rgba(106,60,255,.06),transparent)">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="divider"></div>
+        <h2>Um universo conectado</h2>
+        <p>Os jogos não são mundos separados. Valdória é uma só — e jogar um é uma vantagem no outro.</p>
+      </div>
+      <div class="bridge">
+        <div class="bridge-card reveal">
+          <h3>⚔️ No MLKD RPG</h3>
+          <p>Leve qualquer personagem ao <b>nível 10</b> e ganhe o direito de resgatar um prêmio raro no Survivor.</p>
+        </div>
+        <div class="bridge-center reveal d1">
+          <img src="assets/img/rei-caido.webp" alt="O Espírito do Rei Caído" width="220" height="220" loading="lazy">
+          <span>Espírito do Rei Caído</span>
+        </div>
+        <div class="bridge-card reveal d2">
+          <h3>🧛 No MLKD Survivor</h3>
+          <p>O resgate libera o <b>Rei Caído</b>, uma classe exclusiva que só quem joga os dois mundos pode usar.</p>
+        </div>
+      </div>
+      <div class="perks">
+        <div class="perk reveal"><div class="ic">🐉</div><b>Os mesmos monstros</b><p>A Rainha Aracnídea, o Dragão do Abismo e o Necromante Supremo assombram os dois jogos.</p></div>
+        <div class="perk reveal d1"><div class="ic">🛡️</div><b>Os mesmos heróis</b><p>Guerreiro, Ladino, Mago, Arqueiro, Monge e Druida: as classes do RPG ganham nova vida no Survivor.</p></div>
+        <div class="perk reveal d2"><div class="ic">🍺</div><b>A comunidade dentro do jogo</b><p>Os mercenários da Taverna do Survivor homenageiam jogadores reais da comunidade do RPG.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LORE ============ -->
+  <section id="valdoria">
+    <div class="wrap lore">
+      <div class="lore-art reveal">
+        <img src="assets/img/nexus.webp" alt="O Altar do Nexus brilhando em roxo" width="900" height="900" loading="lazy">
+      </div>
+      <div>
+        <div class="section-head reveal" style="text-align:left;margin:0 0 30px">
+          <div class="eyebrow">A lenda</div>
+          <h2>Valdória, o mundo partido</h2>
+          <p>Toda aventura do Universo MLKD acontece no mesmo lugar — e começa com a mesma tragédia.</p>
+        </div>
+        <div class="timeline">
+          <div class="tl-item reveal"><h4>O Nexus</h4><p>Antes do tempo, um ponto de convergência deu origem a seis Elementos Primordiais: Sangue, Veneno, Fogo, Gelo, Raio e Luz Sagrada.</p></div>
+          <div class="tl-item reveal d1"><h4>A Maldição</h4><p>Da colisão entre os elementos nasceu uma sétima força, que corrompe tudo o que toca.</p></div>
+          <div class="tl-item reveal d2"><h4>A Ordem MLKD</h4><p>Heróis fundaram a Ordem e selaram os elementos em Runas para conter a Maldição.</p></div>
+          <div class="tl-item reveal d3"><h4>As Runas partidas</h4><p>A Ordem se fragmentou, as Runas se quebraram e cada uma corrompeu uma região — da Floresta Amaldiçoada ao Trono do Caos.</p></div>
+          <div class="tl-item reveal d3"><h4>Agora</h4><p>Valdória precisa de novos aventureiros. Talvez de você.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BESTIÁRIO ============ -->
+  <section id="bestiario" style="background:linear-gradient(180deg,transparent,rgba(255,138,61,.05),transparent)">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="divider"></div>
+        <h2>Bestiário de Valdória</h2>
+        <p>Eles estão nos dois jogos — e não vão facilitar. Toque em um monstro para ler sua história.</p>
+      </div>
+      <div class="bestiary">
+        <button class="beast reveal" type="button"><img src="assets/img/monstro-minotauro_jovem.webp" alt="Minotauro Jovem" width="420" height="420" loading="lazy"><figcaption><small>Planície</small><b>Minotauro Jovem</b></figcaption><span class="lore-pop">O primeiro grande desafio de quem sai dos portões. Muitos aventureiros contam a história do encontro — poucos contam a vitória.</span></button>
+        <button class="beast reveal d1" type="button"><img src="assets/img/monstro-rainha_aracnidea.webp" alt="Rainha Aracnídea" width="420" height="420" loading="lazy"><figcaption><small>Floresta Amaldiçoada</small><b>Rainha Aracnídea</b></figcaption><span class="lore-pop">Nasceu do Pacto Sombrio que corrompeu a floresta. Suas teias cobrem trilhas que ninguém mais usa.</span></button>
+        <button class="beast reveal d2" type="button"><img src="assets/img/monstro-dragao_jovem.webp" alt="Dragão Jovem" width="420" height="420" loading="lazy"><figcaption><small>Cavernas de Ignis</small><b>Dragão Jovem</b></figcaption><span class="lore-pop">Jovem, mas já protege as cavernas vulcânicas como se fossem um tesouro. Seu fogo derrete aço.</span></button>
+        <button class="beast reveal d3" type="button"><img src="assets/img/monstro-wyvern_do_inverno.webp" alt="Wyvern do Inverno" width="420" height="420" loading="lazy"><figcaption><small>Pico Gélido</small><b>Wyvern do Inverno</b></figcaption><span class="lore-pop">Senhora dos ventos gelados do Pico. Quando ela passa, a neve cai mais pesada.</span></button>
+        <button class="beast reveal" type="button"><img src="assets/img/monstro-djinn_furioso.webp" alt="Djinn Furioso" width="420" height="420" loading="lazy"><figcaption><small>Deserto de Ashnar</small><b>Djinn Furioso</b></figcaption><span class="lore-pop">Restos do império de Ashnar, destruído ao tentar controlar o raio. Sua fúria nunca se apagou.</span></button>
+        <button class="beast reveal d1" type="button"><img src="assets/img/monstro-necromante_supremo.webp" alt="Necromante Supremo" width="420" height="420" loading="lazy"><figcaption><small>Catacumbas Eternas</small><b>Necromante Supremo</b></figcaption><span class="lore-pop">Nas Catacumbas, a morte não é o fim — é só o começo do serviço dele.</span></button>
+        <button class="beast reveal d2" type="button"><img src="assets/img/monstro-quimera_sombria.webp" alt="Quimera Sombria" width="420" height="420" loading="lazy"><figcaption><small>Trono do Caos</small><b>Quimera Sombria</b></figcaption><span class="lore-pop">Três criaturas, uma só fome. Guarda o caminho para o Trono do Caos.</span></button>
+        <button class="beast reveal d3" type="button"><img src="assets/img/monstro-dragao_do_abismo.webp" alt="Dragão do Abismo" width="420" height="420" loading="lazy"><figcaption><small>Trono do Caos</small><b>Dragão do Abismo</b></figcaption><span class="lore-pop">Dizem que veio da própria fissura dimensional. O último obstáculo antes do Rei do Caos.</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section id="classe">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="divider"></div>
+        <h2>Qual é a sua classe?</h2>
+        <p>Responda 5 perguntas rápidas e descubra qual herói de Valdória combina com você.</p>
+      </div>
+      <div class="quiz reveal" id="quiz" aria-live="polite">
+        <div class="q-progress"><i></i></div>
+        <div class="q-body"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMUNIDADE ============ -->
+  <section id="comunidade">
+    <div class="wrap">
+      <div class="community reveal">
+        <div class="members">👥 Mais de 2.000 aventureiros</div>
+        <h2>Feito junto com a comunidade</h2>
+        <p>As ideias, os testes e até personagens dos jogos vêm de quem joga. Entre no grupo para conversar, participar dos mini jogos da Taverna e saber das novidades antes de todo mundo.</p>
+        <div class="btn-row">
+          <a class="btn tg" href="https://t.me/+ZDF2BIHxdO0zZjNh" target="_blank" rel="noopener">Entrar na comunidade</a>
+          <a class="btn ghost" href="https://t.me/mlkd_rpg_bot" target="_blank" rel="noopener">Abrir o bot do RPG</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPANSÕES ============ -->
+  <section id="expansoes" style="padding-top:20px">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="divider"></div>
+        <h2>O universo está crescendo</h2>
+        <p>O RPG foi o começo. O Survivor é a primeira expansão. Outras partes de Valdória ainda estão esperando para ser contadas.</p>
+      </div>
+      <div class="mystery">
+        <div class="myst reveal"><div><b>?</b><span>Expansão</span></div></div>
+        <div class="myst reveal d1"><div><b>?</b><span>Expansão</span></div></div>
+        <div class="myst reveal d2"><div><b>?</b><span>Expansão</span></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="./" aria-label="Universo MLKD — início" style="display:inline-flex"><img class="brand-mark" src="assets/img/logo-universo-sm.webp" alt="" width="46" height="46"><span class="brand-text"><small>Universo</small><b>MLKD</b></span></a>
+        <p style="margin-top:12px">Os jogos de Valdória, feitos junto com a comunidade.</p>
+      </div>
+      <div><h5>Jogos</h5><a href="rpg/">MLKD RPG</a><a href="survivor/">MLKD Survivor</a></div>
+      <div><h5>Comunidade</h5><a href="https://t.me/+ZDF2BIHxdO0zZjNh" target="_blank" rel="noopener">Grupo no Telegram</a><a href="https://t.me/mlkd_rpg_bot" target="_blank" rel="noopener">Bot do RPG</a><a href="mailto:weslleyfeltrin@gmail.com">Contato</a></div>
+      <div><h5>MLKD Survivor</h5><a href="privacidade.html">Privacidade</a><a href="termos.html">Termos de uso</a><a href="excluir-dados.html">Excluir dados</a></div>
+    </div>
+    <div class="legal"><span>© 2026 Universo MLKD. Todos os direitos reservados.</span><span>Feito em Valdória 🛡️</span></div>
+  </div>
+</footer>
+
+<script>
+window.MLKD_QUIZ = {
+  questions: [
+    { q: 'Um portal se abre e uma horda sai dele. Você…', a: [
+      ['Fica na frente do grupo e segura todo mundo', 'guerreiro'],
+      ['Some nas sombras e ataca o líder', 'ladino'],
+      ['Conjura uma explosão que pega todos de uma vez', 'mago'],
+      ['Sobe numa pedra e acerta de longe, um por um', 'arqueiro'] ] },
+    { q: 'Seu jeito de vencer uma luta difícil:', a: [
+      ['Aguentar mais do que o inimigo', 'guerreiro,druida'],
+      ['Ser rápido e preciso', 'ladino,arqueiro'],
+      ['Equilíbrio entre atacar e se defender', 'monge'],
+      ['Poder bruto, sem economia', 'mago'] ] },
+    { q: 'Na guilda, você é quem…', a: [
+      ['Cuida dos aliados e mantém todos de pé', 'druida'],
+      ['Puxa a fila para a próxima batalha', 'guerreiro'],
+      ['Treina sozinho para ficar cada vez melhor', 'monge,ladino'],
+      ['Planeja a estratégia antes de agir', 'arqueiro,mago'] ] },
+    { q: 'Escolha uma arma:', a: [
+      ['Espada e escudo', 'guerreiro'],
+      ['Duas adagas', 'ladino'],
+      ['Arco longo', 'arqueiro'],
+      ['Os próprios punhos', 'monge'],
+      ['Um cajado antigo', 'mago,druida'] ] },
+    { q: 'Qual lugar de Valdória te chama?', a: [
+      ['A Floresta Amaldiçoada, cheia de vida estranha', 'druida,arqueiro'],
+      ['As Cavernas de Ignis, onde tudo queima', 'mago,guerreiro'],
+      ['As Catacumbas, onde ninguém te vê chegar', 'ladino'],
+      ['O Pico Gélido, para treinar corpo e mente', 'monge'] ] }
+  ],
+  classes: {
+    guerreiro: { name: 'Guerreiro', emoji: '⚔️', desc: 'A linha de frente. Aguenta o que ninguém aguenta e protege quem está atrás.', rpg: 'tanque que pode ascender a Paladino ou Berserker', sv: 'começa com o Corte Largo, um golpe em arco' },
+    ladino: { name: 'Ladino', emoji: '🗡️', desc: 'Rápido, letal e difícil de acertar. Quando o inimigo percebe, já acabou.', rpg: 'dano rápido e crítico, que pode ascender a Assassino ou Fantasma', sv: 'começa com as Lâminas Rápidas' },
+    mago: { name: 'Mago', emoji: '🔮', desc: 'O poder dos elementos na ponta dos dedos. Frágil de perto, devastador de longe.', rpg: 'dano em área que pode ascender a Elementalista ou Arcano', sv: 'começa com a Bola de Fogo' },
+    arqueiro: { name: 'Arqueiro', emoji: '🏹', desc: 'Paciência e mira perfeita. Cada flecha tem um alvo.', rpg: 'dano à distância que pode ascender a Atirador ou Estrategista', sv: 'começa com a Flecha Certeira' },
+    monge: { name: 'Monge', emoji: '🥋', desc: 'Corpo e mente em equilíbrio. Ataca e se defende com a mesma disciplina.', rpg: 'híbrido que pode ascender a Mestre de Combate ou Sábio', sv: 'começa com os Punhos de Ki' },
+    druida: { name: 'Druida', emoji: '🌿', desc: 'A força da natureza a seu favor. Sustenta o grupo e pune quem se aproxima.', rpg: 'suporte que pode ascender a Guardião da Natureza ou Curandeiro', sv: 'começa com os Espinhos' }
+  }
+}
+</script>
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>
