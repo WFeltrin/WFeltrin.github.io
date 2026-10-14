@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>MLKD Survivor — Sobreviva às hordas de Valdória | Universo MLKD</title>
-<meta name="description" content="MLKD Survivor: jogo de sobrevivência em pixel art para Android, no universo do MLKD RPG. 7 classes, 7 mapas, Torre infinita com ranking online. Em breve na Google Play.">
+<meta name="description" content="MLKD Survivor: jogo de sobrevivência em pixel art para Android, no universo do MLKD RPG. 7 classes, 7 mapas, 79 monstros, 12 mercenários e a Torre infinita com ranking online. Em breve na Google Play.">
 <meta name="theme-color" content="#120c08">
 <link rel="canonical" href="https://mlkd.com.br/survivor/">
-<link rel="icon" type="image/png" href="../assets/img/survivor-icone.webp">
+<link rel="icon" type="image/png" href="../assets/img/favicon.png">
 <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="MLKD Survivor — Sobreviva às hordas de Valdória">
@@ -35,6 +35,8 @@
       <a href="../rpg/">MLKD RPG</a>
       <a href="./" aria-current="page">MLKD Survivor</a>
       <a href="#mapas">Mapas</a>
+      <a href="#herois">Heróis</a>
+      <a href="#torre">Torre</a>
       <a href="#rei-caido">Rei Caído</a>
     </nav>
   </div>
@@ -45,7 +47,7 @@
     <div class="hero-bg pixel" style="background-image:url('../assets/img/sv-hero.webp');image-rendering:pixelated;filter:blur(2px) brightness(.8)"></div>
     <canvas id="embers" data-palette="#ffb54a,#ff8a3d,#ffd36b,#ff5e3a"></canvas>
     <div class="wrap">
-      <img class="pixel reveal" src="../assets/img/logo-survivor.webp" alt="MLKD Survivor" width="260" height="260" style="margin:0 auto 4px;filter:drop-shadow(0 10px 30px rgba(0,0,0,.7))">
+      <img class="pixel reveal sv-logo" src="../assets/img/sv/logo.webp" alt="MLKD Survivor" width="576" height="336">
       <div class="reveal d1"><span class="tag soon">Em breve na Google Play</span></div>
       <h1 class="reveal d1 px" style="font-size:clamp(30px,5.5vw,58px);margin-top:16px">Sobreviva às hordas de Valdória</h1>
       <p class="lead reveal d2">Você só se move. O herói ataca sozinho. Cada nível traz uma carta nova — monte combinações, evolua suas armas e derrube o chefe do mapa antes que a horda te engula.</p>
@@ -55,6 +57,9 @@
           Em breve na Google Play</span>
         <a class="btn ghost" href="https://t.me/+ZDF2BIHxdO0zZjNh" target="_blank" rel="noopener">Ser avisado na comunidade</a>
       </div>
+  <div class="parade" aria-hidden="true">
+      <img class="pixel" src="../assets/img/sv/h-guerreiro-m.webp" alt="" width="144" height="144"><img class="pixel" src="../assets/img/sv/h-arqueiro-f.webp" alt="" width="144" height="144"><img class="pixel" src="../assets/img/sv/h-mago-m.webp" alt="" width="144" height="144"><img class="pixel" src="../assets/img/sv/h-monge-f.webp" alt="" width="144" height="144"><img class="pixel" src="../assets/img/sv/h-ladino-m.webp" alt="" width="144" height="144"><img class="pixel" src="../assets/img/sv/h-druida-f.webp" alt="" width="144" height="144">
+    </div>
     </div>
     <div class="scroll-hint" aria-hidden="true">Role</div>
   </section>
@@ -68,13 +73,14 @@
         <p>Partidas de 8 a 18 minutos, perfeitas para jogar com uma mão — até sem internet.</p>
       </div>
       <div class="phones reveal" tabindex="0" aria-label="Capturas de tela do jogo">
-        <figure class="shot"><img src="../assets/img/sv-captura-1.webp" alt="Herói cercado pela horda no deserto" width="540" height="960" loading="lazy"><span>Hordas sem fim</span></figure>
-        <figure class="shot"><img src="../assets/img/sv-captura-2.webp" alt="Batalha nas cavernas" width="540" height="960" loading="lazy"><span>Combos de armas</span></figure>
+        <figure class="shot"><img src="../assets/img/sv-captura-1.webp" alt="Horda cercando o herói na Floresta" width="540" height="960" loading="lazy"><span>Hordas sem fim</span></figure>
+        <figure class="shot"><img src="../assets/img/sv-captura-2.webp" alt="Mago contra o Dragão Jovem" width="540" height="960" loading="lazy"><span>Chefes de mapa</span></figure>
         <figure class="shot"><img src="../assets/img/sv-captura-3.webp" alt="Escolha de cartas ao subir de nível" width="540" height="960" loading="lazy"><span>Cartas a cada nível</span></figure>
-        <figure class="shot"><img src="../assets/img/sv-captura-4.webp" alt="Batalha no Pico Gélido" width="540" height="960" loading="lazy"><span>7 mapas de Valdória</span></figure>
-        <figure class="shot"><img src="../assets/img/sv-captura-5.webp" alt="Seleção de heróis" width="540" height="960" loading="lazy"><span>7 classes</span></figure>
-        <figure class="shot"><img src="../assets/img/sv-captura-6.webp" alt="Seleção de mapas e modos" width="540" height="960" loading="lazy"><span>Modos e a Torre</span></figure>
-        <figure class="shot"><img src="../assets/img/sv-captura-7.webp" alt="Batalha na Floresta" width="540" height="960" loading="lazy"><span>Chefes de mapa</span></figure>
+        <figure class="shot"><img src="../assets/img/sv-captura-4.webp" alt="Arqueira cercada no Pico Gélido" width="540" height="960" loading="lazy"><span>7 mapas de Valdória</span></figure>
+        <figure class="shot"><img src="../assets/img/sv-captura-5.webp" alt="Escolha do herói" width="540" height="960" loading="lazy"><span>7 classes</span></figure>
+        <figure class="shot"><img src="../assets/img/sv-captura-6.webp" alt="Monge no Deserto de Ashnar" width="540" height="960" loading="lazy"><span>Combos de armas</span></figure>
+        <figure class="shot"><img src="../assets/img/sv-captura-7.webp" alt="Taverna dos mercenários" width="540" height="960" loading="lazy"><span>12 mercenários</span></figure>
+        <figure class="shot"><img src="../assets/img/sv-captura-8.webp" alt="Guardião do Nexus na Torre" width="540" height="960" loading="lazy"><span>A Torre infinita</span></figure>
       </div>
     </div>
   </section>
@@ -85,8 +91,28 @@
       <div class="stats">
         <div class="stat reveal"><b data-count="7">7</b><span>classes</span></div>
         <div class="stat reveal d1"><b data-count="7">7</b><span>mapas com chefes</span></div>
-        <div class="stat reveal d2"><b data-count="22">22</b><span>conquistas</span></div>
+        <div class="stat reveal d2"><b data-count="79">79</b><span>monstros e chefes</span></div>
         <div class="stat reveal d3"><b>∞</b><span>andares na Torre</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Heróis -->
+  <section id="herois">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="divider"></div>
+        <h2 class="px">Os heróis de Valdória</h2>
+        <p>As classes do MLKD RPG em pixel art, cada uma com arma, passiva, golpe especial e evolução próprias. Jogue com a versão masculina ou a feminina.</p>
+      </div>
+      <div class="hero-grid">
+        <article class="hero-card reveal"><div class="hc-art"><img class="pixel" src="../assets/img/sv/h-guerreiro-m.webp" alt="Guerreiro (masculino)" width="144" height="144" loading="lazy"><img class="pixel" src="../assets/img/sv/h-guerreiro-f.webp" alt="Guerreiro (feminino)" width="144" height="144" loading="lazy"></div><b>Guerreiro</b><small>Tanque · Corte Largo</small></article>
+        <article class="hero-card reveal d1"><div class="hc-art"><img class="pixel" src="../assets/img/sv/h-arqueiro-m.webp" alt="Arqueiro (masculino)" width="144" height="144" loading="lazy"><img class="pixel" src="../assets/img/sv/h-arqueiro-f.webp" alt="Arqueiro (feminino)" width="144" height="144" loading="lazy"></div><b>Arqueiro</b><small>Dano à distância · Flecha Certeira</small></article>
+        <article class="hero-card reveal d2"><div class="hc-art"><img class="pixel" src="../assets/img/sv/h-mago-m.webp" alt="Mago (masculino)" width="144" height="144" loading="lazy"><img class="pixel" src="../assets/img/sv/h-mago-f.webp" alt="Mago (feminino)" width="144" height="144" loading="lazy"></div><b>Mago</b><small>Dano em área · Bola de Fogo</small></article>
+        <article class="hero-card reveal"><div class="hc-art"><img class="pixel" src="../assets/img/sv/h-monge-m.webp" alt="Monge (masculino)" width="144" height="144" loading="lazy"><img class="pixel" src="../assets/img/sv/h-monge-f.webp" alt="Monge (feminino)" width="144" height="144" loading="lazy"></div><b>Monge</b><small>Equilibrado · Punhos de Ki</small></article>
+        <article class="hero-card reveal d1"><div class="hc-art"><img class="pixel" src="../assets/img/sv/h-ladino-m.webp" alt="Ladino (masculino)" width="144" height="144" loading="lazy"><img class="pixel" src="../assets/img/sv/h-ladino-f.webp" alt="Ladino (feminino)" width="144" height="144" loading="lazy"></div><b>Ladino</b><small>Assassino · Lâminas Rápidas</small></article>
+        <article class="hero-card reveal d2"><div class="hc-art"><img class="pixel" src="../assets/img/sv/h-druida-m.webp" alt="Druida (masculino)" width="144" height="144" loading="lazy"><img class="pixel" src="../assets/img/sv/h-druida-f.webp" alt="Druida (feminino)" width="144" height="144" loading="lazy"></div><b>Druida</b><small>Sustento · Espinhos</small></article>
+        <article class="hero-card rare reveal"><div class="hc-art"><img class="pixel" src="../assets/img/sv/h-rei-x.webp" alt="Rei Caído" width="192" height="192" loading="lazy"></div><b>Rei Caído</b><small>Exclusivo · Lâmina do Rei</small></article>
       </div>
     </div>
   </section>
@@ -100,14 +126,39 @@
         <p>As mesmas terras e os mesmos monstros do MLKD RPG, agora em tempo real.</p>
       </div>
       <div class="maps-list">
-        <div class="map-row reveal"><b>Planície</b><small>8 min · Chefe: Minotauro Jovem</small></div>
-        <div class="map-row reveal d1"><b>Floresta Amaldiçoada</b><small>10 min · Chefe: Rainha Aracnídea</small></div>
-        <div class="map-row reveal d2"><b>Cavernas de Ignis</b><small>11 min · Chefe: Dragão Jovem</small></div>
-        <div class="map-row reveal d3"><b>Pico Gélido</b><small>13 min · Chefe: Wyvern do Inverno</small></div>
-        <div class="map-row reveal"><b>Deserto de Ashnar</b><small>14 min · Chefe: Djinn Furioso</small></div>
-        <div class="map-row reveal d1"><b>Catacumbas Eternas</b><small>16 min · Chefe: Necromante Supremo</small></div>
-        <div class="map-row reveal d2"><b>Trono do Caos</b><small>18 min · Chefe: Dragão do Abismo</small></div>
-        <div class="map-row reveal d3"><b>Torre de Valdória</b><small>Infinita · ranking online semanal</small></div>
+        <div class="map-row reveal"><i class="map-thumb" style="--i:0"></i><div><b>Planície</b><small>8 min · Chefe: Minotauro Jovem</small></div><img class="pixel map-boss" src="../assets/img/sv/minotauro.webp" alt="Minotauro Jovem" loading="lazy"></div>
+        <div class="map-row reveal d1"><i class="map-thumb" style="--i:1"></i><div><b>Floresta Amaldiçoada</b><small>10 min · Chefe: Rainha Aracnídea</small></div><img class="pixel map-boss" src="../assets/img/sv/rainha.webp" alt="Rainha Aracnídea" loading="lazy"></div>
+        <div class="map-row reveal d2"><i class="map-thumb" style="--i:2"></i><div><b>Cavernas de Ignis</b><small>11 min · Chefe: Dragão Jovem</small></div><img class="pixel map-boss" src="../assets/img/sv/dragao.webp" alt="Dragão Jovem" loading="lazy"></div>
+        <div class="map-row reveal d3"><i class="map-thumb" style="--i:3"></i><div><b>Pico Gélido</b><small>13 min · Chefe: Wyvern do Inverno</small></div><img class="pixel map-boss" src="../assets/img/sv/wyvern.webp" alt="Wyvern do Inverno" loading="lazy"></div>
+        <div class="map-row reveal"><i class="map-thumb" style="--i:4"></i><div><b>Deserto de Ashnar</b><small>14 min · Chefe: Djinn Furioso</small></div><img class="pixel map-boss" src="../assets/img/sv/djinn.webp" alt="Djinn Furioso" loading="lazy"></div>
+        <div class="map-row reveal d1"><i class="map-thumb" style="--i:5"></i><div><b>Catacumbas Eternas</b><small>16 min · Chefe: Necromante Supremo</small></div><img class="pixel map-boss" src="../assets/img/sv/necromante.webp" alt="Necromante Supremo" loading="lazy"></div>
+        <div class="map-row reveal d2"><i class="map-thumb" style="--i:6"></i><div><b>Trono do Caos</b><small>18 min · Chefe: Dragão do Abismo</small></div><img class="pixel map-boss" src="../assets/img/sv/dragaoabismo.webp" alt="Dragão do Abismo" loading="lazy"></div>
+        <div class="map-row reveal d3"><i class="map-thumb" style="--i:7"></i><div><b>Torre de Valdória</b><small>Infinita · ranking online semanal</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Torre -->
+  <section id="torre">
+    <div class="wrap tower">
+      <figure class="shot tower-shot reveal"><img src="../assets/img/sv/torre.webp" alt="Corredor da Torre de Valdória" width="540" height="960" loading="lazy"><span>Zona do Raio</span></figure>
+      <div class="tower-txt reveal d1">
+        <div class="divider" style="margin:0 0 18px"></div>
+        <h2 class="px">A Torre de Valdória</h2>
+        <p>Um corredor que só sobe, enquanto a escuridão vem de baixo. Dez zonas elementais, armadilhas no chão, um mini-chefe a cada 5 andares e um chefe a cada 10. Entre as zonas, o <b>Andarilho</b> vende poções, relíquias e uma segunda chance.</p>
+        <p>Chegou ao topo? O ciclo recomeça mais forte. O seu andar mais alto entra no <b>ranking semanal</b>.</p>
+        <div class="tower-bosses" tabindex="0" aria-label="Chefes da Torre">
+          <figure><img class="pixel" src="../assets/img/sv/t_colosso.webp" alt="Colosso da Entrada" loading="lazy"><figcaption>Colosso da Entrada</figcaption></figure>
+          <figure><img class="pixel" src="../assets/img/sv/t_manticora.webp" alt="Mantícora Peçonhenta" loading="lazy"><figcaption>Mantícora Peçonhenta</figcaption></figure>
+          <figure><img class="pixel" src="../assets/img/sv/t_dragaoanciao.webp" alt="Dragão de Fogo Ancião" loading="lazy"><figcaption>Dragão de Fogo Ancião</figcaption></figure>
+          <figure><img class="pixel" src="../assets/img/sv/t_colossoglacial.webp" alt="Colosso Glacial" loading="lazy"><figcaption>Colosso Glacial</figcaption></figure>
+          <figure><img class="pixel" src="../assets/img/sv/t_fenrir.webp" alt="Fenrir da Tempestade" loading="lazy"><figcaption>Fenrir da Tempestade</figcaption></figure>
+          <figure><img class="pixel" src="../assets/img/sv/t_lorde.webp" alt="Lorde da Perdição" loading="lazy"><figcaption>Lorde da Perdição</figcaption></figure>
+          <figure><img class="pixel" src="../assets/img/sv/t_tita.webp" alt="Titã Primordial" loading="lazy"><figcaption>Titã Primordial</figcaption></figure>
+          <figure><img class="pixel" src="../assets/img/sv/t_biforme.webp" alt="Colosso Biforme" loading="lazy"><figcaption>Colosso Biforme</figcaption></figure>
+          <figure><img class="pixel" src="../assets/img/sv/t_devorador.webp" alt="Devorador Abissal" loading="lazy"><figcaption>Devorador Abissal</figcaption></figure>
+          <figure><img class="pixel" src="../assets/img/sv/t_nexus.webp" alt="Guardião do Nexus" loading="lazy"><figcaption>Guardião do Nexus</figcaption></figure>
+        </div>
       </div>
     </div>
   </section>
@@ -139,9 +190,34 @@
         <p>Os mercenários da Taverna e até uma skin homenageiam jogadores reais da comunidade do MLKD RPG. Talvez você encontre alguém conhecido por lá.</p>
       </div>
       <div class="mercs reveal">
-        <span class="merc">Arthuria</span><span class="merc">Uldric</span><span class="merc">Pipino</span><span class="merc">Wulong</span><span class="merc">Warll</span><span class="merc">Gizelly</span>
-        <span class="merc">Protasio</span><span class="merc">Shadow</span><span class="merc">Coelho</span><span class="merc">Tibia</span><span class="merc">Imperador Bines</span><span class="merc">Kundra</span>
-        <span class="merc skin" title="Skin de Fundador, para quem testou o jogo">✦ Doran <small>skin de Fundador</small></span>
+        <figure class="merc"><img class="pixel" src="../assets/img/sv/h-merc_arthuria.webp" alt="" width="144" height="144" loading="lazy"><b>Arthuria</b><small>Guerreira Paladina</small></figure>
+        <figure class="merc"><img class="pixel" src="../assets/img/sv/h-merc_uldric.webp" alt="" width="144" height="144" loading="lazy"><b>Uldric</b><small>Guerreiro Berserker</small></figure>
+        <figure class="merc"><img class="pixel" src="../assets/img/sv/h-merc_pipino.webp" alt="" width="144" height="144" loading="lazy"><b>Pipino</b><small>Mago Arcano</small></figure>
+        <figure class="merc"><img class="pixel" src="../assets/img/sv/h-merc_wulong.webp" alt="" width="144" height="144" loading="lazy"><b>Wulong</b><small>Mago Elementalista</small></figure>
+        <figure class="merc"><img class="pixel" src="../assets/img/sv/h-merc_warll.webp" alt="" width="144" height="144" loading="lazy"><b>Warll</b><small>Ladina Fantasma</small></figure>
+        <figure class="merc"><img class="pixel" src="../assets/img/sv/h-merc_gizelly.webp" alt="" width="144" height="144" loading="lazy"><b>Gizelly</b><small>Ladina Assassina</small></figure>
+        <figure class="merc"><img class="pixel" src="../assets/img/sv/h-merc_protasio.webp" alt="" width="144" height="144" loading="lazy"><b>Protasio</b><small>Monge Sábio</small></figure>
+        <figure class="merc"><img class="pixel" src="../assets/img/sv/h-merc_shadow.webp" alt="" width="144" height="144" loading="lazy"><b>Shadow</b><small>Monge Mestre de Combate</small></figure>
+        <figure class="merc"><img class="pixel" src="../assets/img/sv/h-merc_coelho.webp" alt="" width="144" height="144" loading="lazy"><b>Coelho</b><small>Arqueiro Atirador</small></figure>
+        <figure class="merc"><img class="pixel" src="../assets/img/sv/h-merc_tibia.webp" alt="" width="144" height="144" loading="lazy"><b>Tibia</b><small>Arqueiro Estrategista</small></figure>
+        <figure class="merc"><img class="pixel" src="../assets/img/sv/h-merc_bines.webp" alt="" width="144" height="144" loading="lazy"><b>Imperador Bines</b><small>Druida Guardião</small></figure>
+        <figure class="merc"><img class="pixel" src="../assets/img/sv/h-merc_kundra.webp" alt="" width="144" height="144" loading="lazy"><b>Kundra</b><small>Druida Curandeiro</small></figure>
+        <figure class="merc skin" title="Skin de Fundador, para quem testou o jogo"><img class="pixel" src="../assets/img/sv/h-skin_doran.webp" alt="" width="144" height="144" loading="lazy"><b>✦ Doran</b><small>skin de Fundador</small></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dois visuais -->
+  <section id="visual" style="padding-top:20px">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="divider"></div>
+        <h2 class="px">Dois visuais, um só jogo</h2>
+        <p>O visual novo é desenhado quadro a quadro: heróis, monstros, mapas e efeitos animados. Prefere o clássico? O visual Retrô continua lá, a um toque nos Ajustes.</p>
+      </div>
+      <div class="visuals reveal">
+        <figure><img src="../assets/img/sv/menu-novo.webp" alt="Menu no visual novo" width="360" height="640" loading="lazy"><figcaption>Novo</figcaption></figure>
+        <figure><img src="../assets/img/sv/menu-retro.webp" alt="Menu no visual Retrô" width="360" height="640" loading="lazy"><figcaption>Retrô</figcaption></figure>
       </div>
     </div>
   </section>

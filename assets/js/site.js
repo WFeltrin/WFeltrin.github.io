@@ -168,3 +168,120 @@
     render()
   }
 })()
+
+/* ---------- O Observador: o olho segue o cursor (ou o toque), pisca e se revela ---------- */
+;(function () {
+  'use strict'
+  var BASE = document.body.getAttribute('data-base') || ''
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  var FRAG = [
+    'Eu estava lá quando a primeira Runa foi selada. O ar crepitava com o peso de todo o poder do mundo sendo comprimido numa pedra...',
+    'A Floresta era verde, sabia? Verde como esmeralda. Foram os caçadores que a destruíram, homens tolos que tentaram extrair o poder da Runa-Mãe...',
+    'O Faraó de Ashnar era um grande homem. Até decidir que ser grande não bastava: queria ser um deus. O deserto inteiro pagou por sua ambição...',
+    'Sabe por que os mortos não descansam nas Catacumbas? Porque alguém inverteu a Runa da Luz. O que curava agora aprisiona as almas...',
+    'O Rei do Caos... eu o conheci antes. Antes do Trono, antes da fissura. Ele era... não importa. O que ele era já morreu.',
+    'A Torre não foi construída. Ela cresceu. Como uma árvore, mas de pedra e propósito. O Nexus a criou para testar os dignos...',
+    'Cada Runa partida liberta uma maldição diferente. Sangue, Veneno, Fogo, Gelo, Raio, Luz invertida... e uma sétima que não tem nome. Essa é a que mais me preocupa.',
+    'O Golem de Ferro foi o último guardião que a Ordem criou. Deveria nos proteger para sempre. Agora ataca tudo que se move. Irônico, não?'
+  ]
+  var REVEAL = 'Agora o Observador conhece cada movimento seu. Não há mais para onde fugir...'
+  function build(host) {
+    var img = BASE + 'assets/img/obs/'
+    host.innerHTML = '<div class="obs-float"><img class="obs-body" src="' + img + 'corpo.webp" alt="O Observador" width="160" height="160">' +
+      '<div class="obs-eye"><img class="obs-iris" src="' + img + 'iris.webp" alt="" width="23" height="19"><i class="obs-lid"></i></div>' +
+      '<img class="obs-reveal" src="' + img + 'revelado.webp" alt="" width="160" height="160" loading="lazy"></div>'
+    return host
+  }
+  var all = []
+  document.querySelectorAll('[data-observer]').forEach(function (h) { all.push(build(h)) })
+  // pequeno, voando pela tela em todas as páginas (some enquanto a seção dele, na página geral, está à vista)
+  var roam = null
+  if (!reduce) {
+    roam = document.createElement('div'); roam.className = 'obs-roam'
+    var ro = document.createElement('div'); ro.className = 'observer'; roam.appendChild(build(ro))
+    var bub = document.createElement('div'); bub.className = 'obs-bubble'; roam.appendChild(bub)
+    document.body.appendChild(roam); all.push(ro)
+    var big = document.querySelector('[data-observer]'), bigOn = false
+    if (big && 'IntersectionObserver' in window) new IntersectionObserver(function (e) { bigOn = e[0].isIntersecting; roam.classList.toggle('away', bigOn) }, { threshold: .2 }).observe(big)
+    var x = -120, y = window.innerHeight * .6, busy = false
+    var size = function () { return roam.offsetWidth || 90 }
+    var body = ro.querySelector('.obs-body'), IMG = BASE + 'assets/img/obs/', flyT = 0
+    new Image().src = IMG + 'voo.webp'
+    var place = function (nx, ny, dur) {
+      var dx = nx - x, dy = ny - y; roam.style.transitionDuration = dur + 'ms'
+      if (Math.abs(dx) > 30) ro.classList.toggle('flip', dx < 0)
+      roam.style.setProperty('--tilt', (Math.max(-10, Math.min(10, Math.abs(dx) / 50)) * (dx < 0 ? -1 : 1)) + 'deg')
+      roam.style.transform = 'translate(' + nx + 'px,' + ny + 'px)'; x = nx; y = ny
+      if (Math.abs(dx) > 60 || Math.abs(dy) > 60) { body.src = IMG + 'voo.webp' }
+      clearTimeout(flyT); flyT = setTimeout(function () { roam.style.setProperty('--tilt', '0deg'); body.src = IMG + 'corpo.webp' }, dur * .9)
+    }
+    var fly = function () {
+      if (!busy && !document.hidden) {
+        var W = window.innerWidth, H = window.innerHeight, s = size(), m = 10, band = Math.max(s + 2 * m, W / 4)
+        var side = Math.random() < .25 ? (x < W / 2 ? 1 : 0) : (x < W / 2 ? 0 : 1) // às vezes cruza para o outro lado
+        var nx = m + Math.random() * Math.max(0, band - s - 2 * m); if (side) nx = W - nx - s
+        var ny = 80 + Math.random() * (H - s - 120)
+        var d = Math.hypot(nx - x, ny - y); place(nx, ny, Math.max(1800, Math.min(5200, d * 7)))
+      }
+      setTimeout(fly, 5200 + Math.random() * 5200)
+    }
+    roam.style.transform = 'translate(' + x + 'px,' + y + 'px)'
+    setTimeout(fly, 1500)
+    // clique: ele se transforma na Sombra e murmura no balão
+    var bi = Math.floor(Math.random() * FRAG.length)
+    roam.addEventListener('click', function () {
+      if (busy) return; busy = true
+      var t = Math.random() < .35 ? REVEAL : FRAG[bi = (bi + 1) % FRAG.length]
+      ro.classList.add('revealed'); bub.textContent = '“' + t + '”'
+      roam.classList.toggle('below', y < 200); roam.classList.add('talk')
+      // balão sempre dentro da tela: posição horizontal calculada a partir de onde ele está
+      var W = window.innerWidth, bw = Math.min(280, W - 24), s = size(), want = x + s * .9
+      if (want + bw > W - 12) want = x + s * .1 - bw
+      want = Math.max(12, Math.min(W - 12 - bw, want))
+      bub.style.width = bw + 'px'; bub.style.left = (want - x) + 'px'
+      setTimeout(function () { ro.classList.remove('revealed'); roam.classList.remove('talk'); busy = false }, 5200)
+    })
+    roam.setAttribute('role', 'button'); roam.setAttribute('aria-label', 'O Observador')
+  }
+  if (!all.length) return
+  var px = window.innerWidth / 2, py = window.innerHeight / 2, last = 0
+  function aim(o, x, y) {
+    var eye = o.querySelector('.obs-eye'), iris = o.querySelector('.obs-iris'), body = o.querySelector('.obs-body')
+    if (!eye || !body) return
+    var r = eye.getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + r.height / 2, k = body.clientWidth / 160
+    var dx = x - cx, dy = y - cy, d = Math.hypot(dx, dy) || 1, f = Math.min(1, d / 260)
+    if (o.classList.contains('flip')) dx = -dx // virado para a esquerda: o desenho está espelhado
+    var mx = Math.round(dx / d * 4 * f), my = Math.round(dy / d * 2.4 * f) // em pixels do desenho: anda de pixel em pixel
+    iris.style.transform = 'translate(' + (mx * k) + 'px,' + (my * k) + 'px)'
+  }
+  function aimAll() { all.forEach(function (o) { aim(o, px, py) }) }
+  window.addEventListener('pointermove', function (e) { px = e.clientX; py = e.clientY; last = Date.now(); aimAll() }, { passive: true })
+  window.addEventListener('touchstart', function (e) { var t = e.touches[0]; if (t) { px = t.clientX; py = t.clientY; last = Date.now(); aimAll() } }, { passive: true })
+  window.addEventListener('scroll', aimAll, { passive: true })
+  // parado: o olho vagueia sozinho
+  setInterval(function () {
+    if (Date.now() - last < 2500) return
+    px = window.innerWidth * (0.15 + Math.random() * 0.7); py = window.innerHeight * (0.15 + Math.random() * 0.7); aimAll()
+  }, 1800)
+  // piscar
+  ;(function blink() {
+    setTimeout(function () { all.forEach(function (o) { o.classList.add('blink') }); setTimeout(function () { all.forEach(function (o) { o.classList.remove('blink') }); blink() }, 140) }, 2600 + Math.random() * 4200)
+  })()
+  // toque: murmura um fragmento; três toques seguidos revelam a Sombra
+  document.querySelectorAll('[data-observer]').forEach(function (o) {
+    var q = document.getElementById(o.getAttribute('data-quote') || ''), taps = [], i = Math.floor(Math.random() * FRAG.length)
+    var say = function (t) { if (!q) return; q.classList.add('fade'); setTimeout(function () { q.textContent = '“' + t + '”'; q.classList.remove('fade') }, 350) }
+    o.setAttribute('role', 'button'); o.setAttribute('tabindex', '0'); o.setAttribute('aria-label', 'Tocar no Observador')
+    var act = function () {
+      var now = Date.now(); taps = taps.filter(function (t) { return now - t < 1600 }); taps.push(now)
+      if (taps.length >= 3 && !o.classList.contains('revealed')) {
+        taps = []; o.classList.add('revealed'); say(REVEAL)
+        setTimeout(function () { o.classList.remove('revealed') }, 5200); return
+      }
+      if (!o.classList.contains('revealed')) { i = (i + 1) % FRAG.length; say(FRAG[i]) }
+    }
+    o.addEventListener('click', act)
+    o.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); act() } })
+  })
+  aimAll()
+})()
