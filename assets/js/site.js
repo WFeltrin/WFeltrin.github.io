@@ -239,7 +239,8 @@
       if (want + bw > W - 12) want = x + s * .1 - bw
       want = Math.max(12, Math.min(W - 12 - bw, want))
       bub.style.width = bw + 'px'; bub.style.left = (want - x) + 'px'
-      setTimeout(function () { ro.classList.remove('revealed'); roam.classList.remove('talk'); busy = false }, 5200)
+      var ms = Math.max(5200, 3500 + t.length * 45) // tempo de leitura: frases longas ficam mais (≈ +2 s nas grandes)
+      setTimeout(function () { ro.classList.remove('revealed'); roam.classList.remove('talk'); busy = false }, ms)
     })
     roam.setAttribute('role', 'button'); roam.setAttribute('aria-label', 'O Observador')
   }
@@ -276,7 +277,7 @@
       var now = Date.now(); taps = taps.filter(function (t) { return now - t < 1600 }); taps.push(now)
       if (taps.length >= 3 && !o.classList.contains('revealed')) {
         taps = []; o.classList.add('revealed'); say(REVEAL)
-        setTimeout(function () { o.classList.remove('revealed') }, 5200); return
+        setTimeout(function () { o.classList.remove('revealed') }, 7200); return
       }
       if (!o.classList.contains('revealed')) { i = (i + 1) % FRAG.length; say(FRAG[i]) }
     }
