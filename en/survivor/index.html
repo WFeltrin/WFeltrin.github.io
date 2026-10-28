@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MLKD Survivor — Survive the hordes of Valdoria | MLKD Universe</title>
+<link rel="alternate" hreflang="pt-BR" href="https://mlkd.com.br/survivor/"><link rel="alternate" hreflang="en" href="https://mlkd.com.br/en/survivor/"><link rel="alternate" hreflang="es" href="https://mlkd.com.br/es/survivor/"><link rel="alternate" hreflang="x-default" href="https://mlkd.com.br/survivor/">
+<meta name="description" content="MLKD Survivor: a pixel art survival game for Android, set in the MLKD RPG universe. 7 classes, 7 maps, 79 monsters, 12 mercenaries and the endless Tower with an online leaderboard. In English, Portuguese and Spanish. Free on Google Play.">
+<meta name="theme-color" content="#120c08">
+<link rel="canonical" href="https://mlkd.com.br/en/survivor/">
+<link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+<link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MLKD Survivor — Survive the hordes of Valdoria">
+<meta property="og:description" content="Pixel art, monster hordes and the heroes of MLKD RPG. Download it free on Google Play.">
+<meta property="og:image" content="https://mlkd.com.br/assets/img/survivor-destaque.webp">
+<meta property="og:url" content="https://mlkd.com.br/en/survivor/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700;800&family=Pixelify+Sans:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoGame","name":"MLKD Survivor","gamePlatform":"Android","applicationCategory":"Game","genre":"Roguelite / Survivor","inLanguage":["en","pt-BR","es"],"url":"https://mlkd.com.br/en/survivor/","publisher":{"@type":"Organization","name":"MLKD Universe"}}
+</script>
+</head>
+<body class="theme-sv" data-base="../../">
+<a class="skip" href="#jogo">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../" aria-label="MLKD Universe — home"><img class="brand-mark" src="../../assets/img/logo-universo-sm.webp" alt="" width="46" height="46"><span class="brand-text"><small>Universe</small><b>MLKD</b></span></a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="nav-links" aria-label="Main">
+      <a href="../">Universe</a>
+      <a href="../rpg/">MLKD RPG</a>
+      <a href="./" aria-current="page">MLKD Survivor</a>
+      <a href="#mapas">Maps</a>
+      <a href="#herois">Heroes</a>
+      <a href="#torre">Tower</a>
+      <a href="#rei-caido">Fallen King</a>
+    </nav>
+    <div class="lang-switch" aria-label="Idioma / Language"><a href="../../survivor/" hreflang="pt-BR" lang="pt-BR" title="Português"><svg viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" fill="#009c3b"/><path d="M10 1.6 18 7 10 12.4 2 7z" fill="#ffdf00"/><circle cx="10" cy="7" r="3.1" fill="#002776"/></svg></a><a href="./" hreflang="en" lang="en" title="English" aria-current="page"><svg viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" fill="#fff"/><path d="M0 0h20v1.08H0zm0 2.15h20v1.08H0zm0 2.16h20v1.07H0zm0 2.15h20v1.08H0zm0 2.15h20v1.08H0zm0 2.16h20v1.07H0zm0 2.15h20V14H0z" fill="#b22234"/><rect width="8.5" height="7.5" fill="#3c3b6e"/></svg></a><a href="../../es/survivor/" hreflang="es" lang="es" title="Español"><svg viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" fill="#aa151b"/><rect y="3.5" width="20" height="7" fill="#f1bf00"/></svg></a></div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-label="MLKD Survivor">
+    <div class="hero-bg pixel" style="background-image:url('../../assets/img/sv-hero.webp');image-rendering:pixelated;filter:blur(2px) brightness(.8)"></div>
+    <canvas id="embers" data-palette="#ffb54a,#ff8a3d,#ffd36b,#ff5e3a"></canvas>
+    <div class="wrap">
+      <img class="pixel reveal sv-logo" src="../../assets/img/sv/logo.webp" alt="MLKD Survivor" width="576" height="336">
+      <div class="reveal d1"><span class="tag live">Available on Google Play</span></div>
+      <h1 class="reveal d1 px" style="font-size:clamp(30px,5.5vw,58px);margin-top:16px">Survive the hordes of Valdoria</h1>
+      <p class="lead reveal d2">You just move. Your hero attacks on their own. Every level brings a new card — build combos, evolve your weapons and take down the map's boss before the horde swallows you whole.</p>
+      <div class="btn-row reveal d3">
+        <a class="btn ember" href="https://play.google.com/store/apps/details?id=com.mlkdrpg.survivor&hl=en" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 1.8 13.4 12l-9.8 10.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1zm11 11.4 2.6 2.6-11.5 6.6 8.9-9.2zm3.9-3.8 2.6 1.5c.8.4.8 1.6 0 2l-2.6 1.5-2.9-2.5 2.9-2.5zM5.7 1.6l11.5 6.6-2.6 2.6-8.9-9.2z"/></svg>
+          Get it on Google Play</a>
+        <a class="btn ghost" href="https://t.me/+ZDF2BIHxdO0zZjNh" target="_blank" rel="noopener">Join the community</a>
+      </div>
+  <div class="parade" aria-hidden="true">
+      <img class="pixel" src="../../assets/img/sv/h-guerreiro-m.webp" alt="" width="144" height="144"><img class="pixel" src="../../assets/img/sv/h-arqueiro-f.webp" alt="" width="144" height="144"><img class="pixel" src="../../assets/img/sv/h-mago-m.webp" alt="" width="144" height="144"><img class="pixel" src="../../assets/img/sv/h-monge-f.webp" alt="" width="144" height="144"><img class="pixel" src="../../assets/img/sv/h-ladino-m.webp" alt="" width="144" height="144"><img class="pixel" src="../../assets/img/sv/h-druida-f.webp" alt="" width="144" height="144">
+    </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">Scroll</div>
+  </section>
+
+  <!-- Capturas -->
+  <section id="jogo" style="padding-top:30px">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="divider"></div>
+        <h2 class="px">Pixel art, hordes and chaos</h2>
+        <p>Runs of 8 to 18 minutes, perfect for one-handed play — even offline. Play in English, Portuguese or Spanish.</p>
+      </div>
+      <div class="phones reveal" tabindex="0" aria-label="Game screenshots">
+        <figure class="shot"><img src="../../assets/img/sv-captura-1.webp" alt="A horde surrounding the hero in the Forest" width="540" height="960" loading="lazy"><span>Endless hordes</span></figure>
+        <figure class="shot"><img src="../../assets/img/sv-captura-2.webp" alt="Mage versus the Young Dragon" width="540" height="960" loading="lazy"><span>Map bosses</span></figure>
+        <figure class="shot"><img src="../../assets/img/sv-captura-3.webp" alt="Picking a card on level up" width="540" height="960" loading="lazy"><span>Cards every level</span></figure>
+        <figure class="shot"><img src="../../assets/img/sv-captura-4.webp" alt="Archer surrounded on the Frozen Peak" width="540" height="960" loading="lazy"><span>7 maps of Valdoria</span></figure>
+        <figure class="shot"><img src="../../assets/img/sv-captura-5.webp" alt="Hero selection" width="540" height="960" loading="lazy"><span>7 classes</span></figure>
+        <figure class="shot"><img src="../../assets/img/sv-captura-6.webp" alt="Monk in the Ashnar Desert" width="540" height="960" loading="lazy"><span>Weapon combos</span></figure>
+        <figure class="shot"><img src="../../assets/img/sv-captura-7.webp" alt="The mercenaries' Tavern" width="540" height="960" loading="lazy"><span>12 mercenaries</span></figure>
+        <figure class="shot"><img src="../../assets/img/sv-captura-8.webp" alt="Nexus Guardian in the Tower" width="540" height="960" loading="lazy"><span>The endless Tower</span></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Números -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="stats">
+        <div class="stat reveal"><b data-count="7">7</b><span>classes</span></div>
+        <div class="stat reveal d1"><b data-count="7">7</b><span>maps with bosses</span></div>
+        <div class="stat reveal d2"><b data-count="79">79</b><span>monsters and bosses</span></div>
+        <div class="stat reveal d3"><b>∞</b><span>Tower floors</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Heróis -->
+  <section id="herois">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="divider"></div>
+        <h2 class="px">The heroes of Valdoria</h2>
+        <p>The MLKD RPG classes in pixel art, each with its own weapon, passive, special attack and evolution. Play as the male or the female version.</p>
+      </div>
+      <div class="hero-grid">
+        <article class="hero-card reveal"><div class="hc-art"><img class="pixel" src="../../assets/img/sv/h-guerreiro-m.webp" alt="Warrior (male)" width="144" height="144" loading="lazy"><img class="pixel" src="../../assets/img/sv/h-guerreiro-f.webp" alt="Warrior (female)" width="144" height="144" loading="lazy"></div><b>Warrior</b><small>Tank · Wide Slash</small></article>
+        <article class="hero-card reveal d1"><div class="hc-art"><img class="pixel" src="../../assets/img/sv/h-arqueiro-m.webp" alt="Archer (male)" width="144" height="144" loading="lazy"><img class="pixel" src="../../assets/img/sv/h-arqueiro-f.webp" alt="Archer (female)" width="144" height="144" loading="lazy"></div><b>Archer</b><small>Ranged damage · True Arrow</small></article>
+        <article class="hero-card reveal d2"><div class="hc-art"><img class="pixel" src="../../assets/img/sv/h-mago-m.webp" alt="Mage (male)" width="144" height="144" loading="lazy"><img class="pixel" src="../../assets/img/sv/h-mago-f.webp" alt="Mage (female)" width="144" height="144" loading="lazy"></div><b>Mage</b><small>Area damage · Fireball</small></article>
+        <article class="hero-card reveal"><div class="hc-art"><img class="pixel" src="../../assets/img/sv/h-monge-m.webp" alt="Monk (male)" width="144" height="144" loading="lazy"><img class="pixel" src="../../assets/img/sv/h-monge-f.webp" alt="Monk (female)" width="144" height="144" loading="lazy"></div><b>Monk</b><small>Balanced · Ki Fists</small></article>
+        <article class="hero-card reveal d1"><div class="hc-art"><img class="pixel" src="../../assets/img/sv/h-ladino-m.webp" alt="Rogue (male)" width="144" height="144" loading="lazy"><img class="pixel" src="../../assets/img/sv/h-ladino-f.webp" alt="Rogue (female)" width="144" height="144" loading="lazy"></div><b>Rogue</b><small>Assassin · Swift Blades</small></article>
+        <article class="hero-card reveal d2"><div class="hc-art"><img class="pixel" src="../../assets/img/sv/h-druida-m.webp" alt="Druid (male)" width="144" height="144" loading="lazy"><img class="pixel" src="../../assets/img/sv/h-druida-f.webp" alt="Druid (female)" width="144" height="144" loading="lazy"></div><b>Druid</b><small>Sustain · Thorns</small></article>
+        <article class="hero-card rare reveal"><div class="hc-art"><img class="pixel" src="../../assets/img/sv/h-rei-x.webp" alt="Fallen King" width="192" height="192" loading="lazy"></div><b>Fallen King</b><small>Exclusive · King's Blade</small></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mapas -->
+  <section id="mapas">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="divider"></div>
+        <h2 class="px">Seven regions. Seven bosses.</h2>
+        <p>The same lands and the same monsters as MLKD RPG, now in real time.</p>
+      </div>
+      <div class="maps-list">
+        <div class="map-row reveal"><i class="map-thumb" style="--i:0"></i><div><b>Plains</b><small>8 min · Boss: Young Minotaur</small></div><img class="pixel map-boss" src="../../assets/img/sv/minotauro.webp" alt="Young Minotaur" loading="lazy"></div>
+        <div class="map-row reveal d1"><i class="map-thumb" style="--i:1"></i><div><b>Cursed Forest</b><small>10 min · Boss: Spider Queen</small></div><img class="pixel map-boss" src="../../assets/img/sv/rainha.webp" alt="Spider Queen" loading="lazy"></div>
+        <div class="map-row reveal d2"><i class="map-thumb" style="--i:2"></i><div><b>Caverns of Ignis</b><small>11 min · Boss: Young Dragon</small></div><img class="pixel map-boss" src="../../assets/img/sv/dragao.webp" alt="Young Dragon" loading="lazy"></div>
+        <div class="map-row reveal d3"><i class="map-thumb" style="--i:3"></i><div><b>Frozen Peak</b><small>13 min · Boss: Winter Wyvern</small></div><img class="pixel map-boss" src="../../assets/img/sv/wyvern.webp" alt="Winter Wyvern" loading="lazy"></div>
+        <div class="map-row reveal"><i class="map-thumb" style="--i:4"></i><div><b>Ashnar Desert</b><small>14 min · Boss: Furious Djinn</small></div><img class="pixel map-boss" src="../../assets/img/sv/djinn.webp" alt="Furious Djinn" loading="lazy"></div>
+        <div class="map-row reveal d1"><i class="map-thumb" style="--i:5"></i><div><b>Eternal Catacombs</b><small>16 min · Boss: Supreme Necromancer</small></div><img class="pixel map-boss" src="../../assets/img/sv/necromante.webp" alt="Supreme Necromancer" loading="lazy"></div>
+        <div class="map-row reveal d2"><i class="map-thumb" style="--i:6"></i><div><b>Throne of Chaos</b><small>18 min · Boss: Abyss Dragon</small></div><img class="pixel map-boss" src="../../assets/img/sv/dragaoabismo.webp" alt="Abyss Dragon" loading="lazy"></div>
+        <div class="map-row reveal d3"><i class="map-thumb" style="--i:7"></i><div><b>Tower of Valdoria</b><small>Endless · weekly online leaderboard</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Torre -->
+  <section id="torre">
+    <div class="wrap tower">
+      <figure class="shot tower-shot reveal"><img src="../../assets/img/sv/torre.webp" alt="A corridor in the Tower of Valdoria" width="540" height="960" loading="lazy"><span>Lightning Zone</span></figure>
+      <div class="tower-txt reveal d1">
+        <div class="divider" style="margin:0 0 18px"></div>
+        <h2 class="px">The Tower of Valdoria</h2>
+        <p>A corridor that only goes up, while the darkness rises from below. Ten elemental zones, floor traps, a mini-boss every 5 floors and a boss every 10. Between zones, the <b>Wanderer</b> sells potions, relics and a second chance.</p>
+        <p>Made it to the top? The cycle starts over, stronger. Your highest floor goes on the <b>weekly leaderboard</b>.</p>
+        <div class="tower-bosses" tabindex="0" aria-label="Tower bosses">
+          <figure><img class="pixel" src="../../assets/img/sv/t_colosso.webp" alt="Entrance Colossus" loading="lazy"><figcaption>Entrance Colossus</figcaption></figure>
+          <figure><img class="pixel" src="../../assets/img/sv/t_manticora.webp" alt="Venomous Manticore" loading="lazy"><figcaption>Venomous Manticore</figcaption></figure>
+          <figure><img class="pixel" src="../../assets/img/sv/t_dragaoanciao.webp" alt="Ancient Fire Dragon" loading="lazy"><figcaption>Ancient Fire Dragon</figcaption></figure>
+          <figure><img class="pixel" src="../../assets/img/sv/t_colossoglacial.webp" alt="Glacial Colossus" loading="lazy"><figcaption>Glacial Colossus</figcaption></figure>
+          <figure><img class="pixel" src="../../assets/img/sv/t_fenrir.webp" alt="Storm Fenrir" loading="lazy"><figcaption>Storm Fenrir</figcaption></figure>
+          <figure><img class="pixel" src="../../assets/img/sv/t_lorde.webp" alt="Lord of Doom" loading="lazy"><figcaption>Lord of Doom</figcaption></figure>
+          <figure><img class="pixel" src="../../assets/img/sv/t_tita.webp" alt="Primordial Titan" loading="lazy"><figcaption>Primordial Titan</figcaption></figure>
+          <figure><img class="pixel" src="../../assets/img/sv/t_biforme.webp" alt="Twin-Formed Colossus" loading="lazy"><figcaption>Twin-Formed Colossus</figcaption></figure>
+          <figure><img class="pixel" src="../../assets/img/sv/t_devorador.webp" alt="Abyssal Devourer" loading="lazy"><figcaption>Abyssal Devourer</figcaption></figure>
+          <figure><img class="pixel" src="../../assets/img/sv/t_nexus.webp" alt="Nexus Guardian" loading="lazy"><figcaption>Nexus Guardian</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recursos -->
+  <section style="background:linear-gradient(180deg,transparent,rgba(255,138,61,.06),transparent)">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="divider"></div>
+        <h2 class="px">Much more than surviving</h2>
+      </div>
+      <div class="perks" style="margin-top:0">
+        <div class="perk reveal"><div class="ic">🃏</div><b>Cards and evolutions</b><p>Weapons, passives and class-exclusive items. Get the right combo and evolve into Meteor, Arrow Rain or Blade Dance.</p></div>
+        <div class="perk reveal d1"><div class="ic">⚒️</div><b>Forge and upgrades</b><p>Seven elemental essences, fusions and permanent upgrades that make every run stronger.</p></div>
+        <div class="perk reveal d2"><div class="ic">🌀</div><b>Weekly Phenomena</b><p>Events with a personal goal and a community goal: everyone playing together toward the same objective.</p></div>
+        <div class="perk reveal"><div class="ic">🏆</div><b>Tower leaderboard</b><p>Climb floors, dodge traps and fight for the top of the weekly and all-time leaderboards.</p></div>
+        <div class="perk reveal d1"><div class="ic">🔥</div><b>Extra modes</b><p>Nightmare with double gold, and Gold Rush, lightning-fast 2-minute runs.</p></div>
+        <div class="perk reveal d2"><div class="ic">🎁</div><b>Daily rewards and quests</b><p>Come back every day: 7-day rewards, 3 daily quests and a Journal with a bestiary.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Taverna / comunidade -->
+  <section>
+    <div class="wrap" style="text-align:center">
+      <div class="section-head reveal">
+        <div class="divider"></div>
+        <h2 class="px">The community is in the game</h2>
+        <p>The Tavern mercenaries and even a skin pay tribute to real players from the MLKD RPG community. You might run into someone you know in there.</p>
+      </div>
+      <div class="mercs reveal">
+        <figure class="merc"><img class="pixel" src="../../assets/img/sv/h-merc_arthuria.webp" alt="" width="144" height="144" loading="lazy"><b>Arthuria</b><small>Paladin Warrior</small></figure>
+        <figure class="merc"><img class="pixel" src="../../assets/img/sv/h-merc_uldric.webp" alt="" width="144" height="144" loading="lazy"><b>Uldric</b><small>Berserker Warrior</small></figure>
+        <figure class="merc"><img class="pixel" src="../../assets/img/sv/h-merc_pipino.webp" alt="" width="144" height="144" loading="lazy"><b>Pipino</b><small>Arcane Mage</small></figure>
+        <figure class="merc"><img class="pixel" src="../../assets/img/sv/h-merc_wulong.webp" alt="" width="144" height="144" loading="lazy"><b>Wulong</b><small>Elementalist Mage</small></figure>
+        <figure class="merc"><img class="pixel" src="../../assets/img/sv/h-merc_warll.webp" alt="" width="144" height="144" loading="lazy"><b>Warll</b><small>Phantom Rogue</small></figure>
+        <figure class="merc"><img class="pixel" src="../../assets/img/sv/h-merc_gizelly.webp" alt="" width="144" height="144" loading="lazy"><b>Gizelly</b><small>Assassin Rogue</small></figure>
+        <figure class="merc"><img class="pixel" src="../../assets/img/sv/h-merc_protasio.webp" alt="" width="144" height="144" loading="lazy"><b>Protasio</b><small>Sage Monk</small></figure>
+        <figure class="merc"><img class="pixel" src="../../assets/img/sv/h-merc_shadow.webp" alt="" width="144" height="144" loading="lazy"><b>Shadow</b><small>Combat Master Monk</small></figure>
+        <figure class="merc"><img class="pixel" src="../../assets/img/sv/h-merc_coelho.webp" alt="" width="144" height="144" loading="lazy"><b>Coelho</b><small>Marksman Archer</small></figure>
+        <figure class="merc"><img class="pixel" src="../../assets/img/sv/h-merc_tibia.webp" alt="" width="144" height="144" loading="lazy"><b>Tibia</b><small>Strategist Archer</small></figure>
+        <figure class="merc"><img class="pixel" src="../../assets/img/sv/h-merc_bines.webp" alt="" width="144" height="144" loading="lazy"><b>Emperor Bines</b><small>Guardian Druid</small></figure>
+        <figure class="merc"><img class="pixel" src="../../assets/img/sv/h-merc_kundra.webp" alt="" width="144" height="144" loading="lazy"><b>Kundra</b><small>Healer Druid</small></figure>
+        <figure class="merc skin" title="Founder skin, for those who playtested the game"><img class="pixel" src="../../assets/img/sv/h-skin_doran.webp" alt="" width="144" height="144" loading="lazy"><b>✦ Doran</b><small>Founder skin</small></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dois visuais -->
+  <section id="visual" style="padding-top:20px">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="divider"></div>
+        <h2 class="px">Two looks, one game</h2>
+        <p>The new look is drawn frame by frame: animated heroes, monsters, maps and effects. Prefer the classic? The Retro look is still there, one tap away in Settings.</p>
+      </div>
+      <div class="visuals reveal">
+        <figure><img src="../../assets/img/sv/menu-novo.webp" alt="Menu in the new look" width="360" height="640" loading="lazy"><figcaption>New</figcaption></figure>
+        <figure><img src="../../assets/img/sv/menu-retro.webp" alt="Menu in the Retro look" width="360" height="640" loading="lazy"><figcaption>Retro</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rei Caído -->
+  <section id="rei-caido">
+    <div class="wrap">
+      <div class="bridge">
+        <div class="bridge-card reveal">
+          <h3>Play MLKD RPG</h3>
+          <p>Take a character to <b>level 10</b> in the RPG, which runs right inside Telegram.</p>
+        </div>
+        <div class="bridge-center reveal d1">
+          <img src="../../assets/img/rei-caido.webp" alt="The Spirit of the Fallen King" width="220" height="220" loading="lazy">
+          <span>Fallen King</span>
+        </div>
+        <div class="bridge-card reveal d2">
+          <h3>Unlock it in Survivor</h3>
+          <p>Claim the <b>Spirit of the Fallen King</b> and unlock an exclusive class, only for those who play both worlds.</p>
+        </div>
+      </div>
+      <div class="btn-row" style="justify-content:center;margin-top:36px">
+        <a class="btn tg" href="https://t.me/mlkd_rpg_bot" target="_blank" rel="noopener">Start in MLKD RPG</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Justo -->
+  <section style="padding-top:20px">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="divider"></div>
+        <h2 class="px">Truly fair</h2>
+      </div>
+      <div class="fair">
+        <div class="reveal"><b>No forced ads</b><p>Ads only when you choose to watch one for a bonus. No videos in the middle of a run.</p></div>
+        <div class="reveal d1"><b>No paid loot boxes</b><p>What you buy is exactly what you see in the shop. You can play the whole game without paying.</p></div>
+        <div class="reveal d2"><b>Your data, protected</b><p>Anonymous statistics you can turn off, and data deletion whenever you want.</p></div>
+      </div>
+      <div class="cta-final reveal" style="margin-top:60px">
+        <h2 class="px">Out now on Google Play</h2>
+        <p>Free, no paid loot boxes, and it even works offline. Download it now and join the community to swap tips and keep up with what's new.</p>
+        <div class="btn-row">
+          <a class="btn ember" href="https://play.google.com/store/apps/details?id=com.mlkdrpg.survivor&hl=en" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 1.8 13.4 12l-9.8 10.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1zm11 11.4 2.6 2.6-11.5 6.6 8.9-9.2zm3.9-3.8 2.6 1.5c.8.4.8 1.6 0 2l-2.6 1.5-2.9-2.5 2.9-2.5zM5.7 1.6l11.5 6.6-2.6 2.6-8.9-9.2z"/></svg> Get it on Google Play</a>
+          <a class="btn ghost" href="https://t.me/+ZDF2BIHxdO0zZjNh" target="_blank" rel="noopener">Join the community</a>
+          </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="cols">
+      <div><a class="brand" href="../" aria-label="MLKD Universe — home" style="display:inline-flex"><img class="brand-mark" src="../../assets/img/logo-universo-sm.webp" alt="" width="46" height="46"><span class="brand-text"><small>Universe</small><b>MLKD</b></span></a><p style="margin-top:12px">The games of Valdoria, made together with the community.</p></div>
+      <div><h5>Games</h5><a href="../rpg/">MLKD RPG</a><a href="./">MLKD Survivor</a></div>
+      <div><h5>Community</h5><a href="https://t.me/+ZDF2BIHxdO0zZjNh" target="_blank" rel="noopener">Telegram group</a><a href="mailto:weslleyfeltrin@gmail.com">Contact</a></div>
+      <div><h5>MLKD Survivor</h5><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms of use</a><a href="../delete-data.html">Delete data</a></div>
+    </div>
+    <div class="legal"><span>© 2026 MLKD Universe. All rights reserved.</span><span>Made in Valdoria 🛡️</span></div>
+  </div>
+</footer>
+<script src="../../assets/js/site.js" defer></script>
+</body>
+</html>

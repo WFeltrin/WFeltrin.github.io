@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MLKD RPG — RPG en Telegram | Universo MLKD</title>
+<link rel="alternate" hreflang="pt-BR" href="https://mlkd.com.br/rpg/"><link rel="alternate" hreflang="en" href="https://mlkd.com.br/en/rpg/"><link rel="alternate" hreflang="es" href="https://mlkd.com.br/es/rpg/"><link rel="alternate" hreflang="x-default" href="https://mlkd.com.br/rpg/">
+<meta name="description" content="MLKD RPG: un RPG completo dentro de Telegram, sin instalar nada. 6 clases, Arena PvP, Guerra de Gremios, Torre Infinita, mascotas, forja y la Dimensión del Nexus. Disponible en inglés y portugués.">
+<meta name="theme-color" content="#0b0910">
+<link rel="canonical" href="https://mlkd.com.br/es/rpg/">
+<link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+<link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MLKD RPG — RPG en Telegram">
+<meta property="og:description" content="Caza, forja, únete a un gremio y sube la Torre Infinita. Juega gratis en Telegram.">
+<meta property="og:image" content="https://mlkd.com.br/assets/img/rpg-classes.webp">
+<meta property="og:url" content="https://mlkd.com.br/es/rpg/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/site.css">
+</head>
+<body data-base="../../">
+<a class="skip" href="#recursos">Saltar al contenido</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../" aria-label="Universo MLKD — inicio"><img class="brand-mark" src="../../assets/img/logo-universo-sm.webp" alt="" width="46" height="46"><span class="brand-text"><small>Universo</small><b>MLKD</b></span></a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="../">Universo</a>
+      <a href="./" aria-current="page">MLKD RPG</a>
+      <a href="../survivor/">MLKD Survivor</a>
+      <a href="#classes">Clases</a>
+      <a href="#comecar">Cómo jugar</a>
+    </nav>
+    <div class="lang-switch" aria-label="Idioma / Language"><a href="../../rpg/" hreflang="pt-BR" lang="pt-BR" title="Português"><svg viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" fill="#009c3b"/><path d="M10 1.6 18 7 10 12.4 2 7z" fill="#ffdf00"/><circle cx="10" cy="7" r="3.1" fill="#002776"/></svg></a><a href="../../en/rpg/" hreflang="en" lang="en" title="English"><svg viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" fill="#fff"/><path d="M0 0h20v1.08H0zm0 2.15h20v1.08H0zm0 2.16h20v1.07H0zm0 2.15h20v1.08H0zm0 2.15h20v1.08H0zm0 2.16h20v1.07H0zm0 2.15h20V14H0z" fill="#b22234"/><rect width="8.5" height="7.5" fill="#3c3b6e"/></svg></a><a href="./" hreflang="es" lang="es" title="Español" aria-current="page"><svg viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" fill="#aa151b"/><rect y="3.5" width="20" height="7" fill="#f1bf00"/></svg></a></div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-label="MLKD RPG">
+    <div class="hero-bg" style="background-image:url('../../assets/img/rpg-corrompido.webp')"></div>
+    <canvas id="embers" data-palette="#f2c14e,#ffcf7a,#ff8a3d"></canvas>
+    <div class="wrap">
+      <img class="reveal" src="../../assets/img/logo-rpg.webp" alt="MLKD RPG" width="220" height="220" style="margin:0 auto 6px;filter:drop-shadow(0 10px 30px rgba(0,0,0,.7))">
+      <h1 class="reveal d1" style="font-size:clamp(34px,6vw,64px)">Tu leyenda empieza en Telegram</h1>
+      <p class="lead reveal d2">Un RPG completo, por turnos, que funciona directamente en Telegram. Sin descargas ni registros: abre el bot, elige tu clase y empieza a cazar.</p>
+      <div class="btn-row reveal d3">
+        <a class="btn tg" href="https://t.me/mlkd_rpg_bot" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.8 15.6 9.4 21c.6 0 .9-.3 1.2-.6l2.9-2.8 6 4.4c1.1.6 1.9.3 2.2-1L24 3.6c.4-1.6-.6-2.3-1.7-1.9L1 10.3c-1.6.6-1.6 1.5-.3 1.9l5.6 1.7L19.4 5.8c.6-.4 1.2-.2.7.3"/></svg>
+          Juega gratis ahora</a>
+        <a class="btn ghost" href="#recursos">Mira lo que trae el juego</a>
+      </div>
+      <p class="reveal d3" style="margin:12px 0 0;font-size:14px;opacity:.8">(disponible en inglés y portugués)</p>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">Desliza</div>
+  </section>
+
+  <!-- Números -->
+  <section style="padding-top:20px">
+    <div class="wrap">
+      <div class="stats">
+        <div class="stat reveal"><b data-count="6">6</b><span>clases</span></div>
+        <div class="stat reveal d1"><b data-count="12">12</b><span>subclases</span></div>
+        <div class="stat reveal d2"><b data-count="90">90</b><span>niveles</span></div>
+        <div class="stat reveal d3"><b data-count="86">86</b><span>logros</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recursos -->
+  <section id="recursos">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="divider"></div>
+        <h2>Todo lo que un RPG debe tener</h2>
+        <p>Y un poco más. El juego crece cada semana junto con la comunidad.</p>
+      </div>
+
+      <div class="feature reveal">
+        <div class="feature-art"><img src="../../assets/img/rpg-arena.webp" alt="Arena PvP de MLKD RPG" width="1200" height="800" loading="lazy"></div>
+        <div>
+          <div class="eyebrow">PvP</div>
+          <h3>Arena: demuestra quién es el mejor</h3>
+          <p>Lucha contra otros jugadores en el modo Clásico o en Clasificatoria y sube de Bronce a Leyenda. ¿No hay nadie en la cola? Te enfrentas a la Sombra de un jugador real, que juega igual que su dueño.</p>
+          <div class="chips"><span class="chip">Clasificatoria por temporada</span><span class="chip">Sombras inteligentes</span><span class="chip">Duelo 1 vs 1</span><span class="chip">Prime Time +20%</span></div>
+        </div>
+      </div>
+
+      <div class="feature reveal">
+        <div class="feature-art"><img src="../../assets/img/rpg-guerra.webp" alt="Guerra de Gremios" width="800" height="1200" loading="lazy" style="aspect-ratio:4/3;object-position:center 25%"></div>
+        <div>
+          <div class="eyebrow">Gremios</div>
+          <h3>Guerra de Gremios cada fin de semana</h3>
+          <p>Arma tu gremio, conquista territorios, enfréntate a un rival cada día y pelea por la cima del ranking. Entre semana, invoquen juntos al Jefe del Gremio y completen misiones grupales.</p>
+          <div class="chips"><span class="chip">De viernes a domingo</span><span class="chip">Territorios</span><span class="chip">Rival diario</span><span class="chip">Jefe del Gremio</span></div>
+        </div>
+      </div>
+
+      <div class="feature reveal">
+        <div class="feature-art"><img src="../../assets/img/rpg-bosses.webp" alt="Jefes de MLKD RPG" width="1000" height="1000" loading="lazy"></div>
+        <div>
+          <div class="eyebrow">Jefes</div>
+          <h3>Monstruos que exigen a todo el servidor</h3>
+          <p>El Jefe Semanal tiene vida compartida entre todos los jugadores: cada golpe cuenta para el ranking. Y en las cacerías, con mucha suerte, aparece el legendario Espíritu del Rey Caído.</p>
+          <div class="chips"><span class="chip">Jefe Semanal</span><span class="chip">Mazmorras en solitario y en grupo</span><span class="chip">7 mazmorras con historia</span></div>
+        </div>
+      </div>
+
+      <div class="feature reveal">
+        <div class="feature-art"><img src="../../assets/img/rpg-valgrim.webp" alt="Valgrim, el Maestro Esencista" width="800" height="1000" loading="lazy" style="object-position:center 20%"></div>
+        <div>
+          <div class="eyebrow">Forja</div>
+          <h3>Forja equipo legendario</h3>
+          <p>Encanta armas con siete esencias elementales, sube su calidad hasta Legendario con el maestro Valgrim y despierta reliquias en el Altar del Nexus.</p>
+          <div class="chips"><span class="chip">7 encantamientos</span><span class="chip">Calidad hasta Legendario</span><span class="chip">Reliquias</span></div>
+        </div>
+      </div>
+
+      <div class="grid-cards">
+        <div class="mini reveal"><img src="../../assets/img/rpg-torre.webp" alt="Torre Infinita" width="700" height="700" loading="lazy"><div><h4>Torre Infinita</h4><p>Pisos sin fin, cartas de buena y mala suerte, tienda de cristales y ranking semanal.</p></div></div>
+        <div class="mini reveal d1"><img src="../../assets/img/rpg-pets.webp" alt="Mascotas" width="700" height="700" loading="lazy"><div><h4>Mascotas</h4><p>Empolla huevos, crea un vínculo y lleva a un compañero a la batalla — o envíalo a una expedición.</p></div></div>
+        <div class="mini reveal d2"><img src="../../assets/img/rpg-masmorra.webp" alt="Mazmorras" width="700" height="700" loading="lazy"><div><h4>Mazmorras</h4><p>Salas, jefes y botín raro. En solitario o en grupo de hasta 4 aventureros.</p></div></div>
+        <div class="mini reveal d3"><img src="../../assets/img/rpg-dragao.webp" alt="Dimensión del Nexus" width="800" height="800" loading="lazy"><div><h4>Dimensión del Nexus</h4><p>En el nivel 50, la Ascensión abre los mapas corrompidos — el verdadero final del juego.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Classes -->
+  <section id="classes" style="background:linear-gradient(180deg,transparent,rgba(242,193,78,.05),transparent)">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="divider"></div>
+        <h2>Elige tu héroe</h2>
+        <p>Seis clases, cada una con dos caminos de habilidades y dos subclases en la Ascensión.</p>
+      </div>
+      <div class="class-tabs reveal" role="tablist" aria-label="Clases">
+        <button role="tab" data-class="guerreiro">⚔️ Guerrero</button>
+        <button role="tab" data-class="ladino">🗡️ Pícaro</button>
+        <button role="tab" data-class="mago">🔮 Mago</button>
+        <button role="tab" data-class="arqueiro">🏹 Arquero</button>
+        <button role="tab" data-class="monge">🥋 Monje</button>
+        <button role="tab" data-class="druida">🌿 Druida</button>
+      </div>
+      <div class="class-show reveal" aria-live="polite">
+        <div class="duo">
+          <img id="cs-m" src="../../assets/img/classe-guerreiro-m.webp" alt="Guerrero" width="600" height="600" loading="lazy">
+          <img id="cs-f" src="../../assets/img/classe-guerreiro-f.webp" alt="Guerrera" width="600" height="600" loading="lazy">
+        </div>
+        <div>
+          <h3 id="cs-name">⚔️ Guerrero</h3>
+          <div class="sub" id="cs-role">Tanque</div>
+          <p id="cs-desc"></p>
+          <p style="color:var(--muted)"><b style="color:var(--text)">Ascensión:</b> <span id="cs-sub"></span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como começar -->
+  <section id="comecar">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="divider"></div>
+        <h2>Empieza en 1 minuto</h2>
+        <p>Solo necesitas Telegram.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><b>Abre el bot</b><p>Toca “Jugar” y el juego se abre dentro del propio Telegram.</p></div>
+        <div class="step reveal d1"><b>Elige tu clase</b><p>Crea tu personaje y ponle un nombre que quedará en la historia de Valdoria.</p></div>
+        <div class="step reveal d2"><b>Caza y sube de nivel</b><p>Gana XP, equipo y oro. En el nivel 10, reclama al Rey Caído en Survivor.</p></div>
+      </div>
+      <div class="cta-final reveal" style="margin-top:60px">
+        <h2>Valdoria te espera</h2>
+        <p>Gratis para jugar. Únete a más de 2.000 aventureros en la comunidad.</p>
+        <div class="btn-row">
+          <a class="btn tg" href="https://t.me/mlkd_rpg_bot" target="_blank" rel="noopener">Juega en Telegram</a>
+          <a class="btn ghost" href="https://t.me/+ZDF2BIHxdO0zZjNh" target="_blank" rel="noopener">Únete a la comunidad</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="cols">
+      <div><a class="brand" href="../" aria-label="Universo MLKD — inicio" style="display:inline-flex"><img class="brand-mark" src="../../assets/img/logo-universo-sm.webp" alt="" width="46" height="46"><span class="brand-text"><small>Universo</small><b>MLKD</b></span></a><p style="margin-top:12px">Los juegos de Valdoria, hechos junto con la comunidad.</p></div>
+      <div><h5>Juegos</h5><a href="./">MLKD RPG</a><a href="../survivor/">MLKD Survivor</a></div>
+      <div><h5>Comunidad</h5><a href="https://t.me/+ZDF2BIHxdO0zZjNh" target="_blank" rel="noopener">Grupo en Telegram</a><a href="https://t.me/mlkd_rpg_bot" target="_blank" rel="noopener">Bot del RPG</a><a href="mailto:weslleyfeltrin@gmail.com">Contacto</a></div>
+      <div><h5>Universo</h5><a href="../#valdoria">La historia de Valdoria</a><a href="../#classe">¿Cuál es tu clase?</a></div>
+    </div>
+    <div class="legal"><span>© 2026 Universo MLKD. Todos los derechos reservados.</span><span>Hecho en Valdoria 🛡️</span></div>
+  </div>
+</footer>
+
+<script>
+window.MLKD_CLASSES = {
+  guerreiro: { name: 'Guerrero', emoji: '⚔️', role: 'Tanque · primera línea', desc: 'Mucha vida, mucha defensa y golpes pesados. El Guerrero aguanta la presión para que el grupo brille.', subs: 'Paladín 🛡️ o Berserker 🪓' },
+  ladino: { name: 'Pícaro', emoji: '🗡️', role: 'Daño rápido · críticos', desc: 'Velocidad, evasión y críticos que derriban a los enemigos antes de que puedan reaccionar.', subs: 'Asesino 🗡️ o Fantasma 👻' },
+  mago: { name: 'Mago', emoji: '🔮', role: 'Daño mágico · elementos', desc: 'Domina los elementos de Valdoria y convierte el maná en explosiones devastadoras.', subs: 'Elementalista 🔥 o Arcano 🔮' },
+  arqueiro: { name: 'Arquero', emoji: '🏹', role: 'Daño a distancia · precisión', desc: 'Ataques certeros y estrategia: cada flecha cuenta, y la próxima puede ser fatal.', subs: 'Tirador 🎯 o Estratega 🦅' },
+  monge: { name: 'Monje', emoji: '🥋', role: 'Híbrido · equilibrio', desc: 'Cuerpo y mente en sintonía. Combina ataque y defensa como ninguna otra clase.', subs: 'Maestro de Combate 👊 o Sabio ☯️' },
+  druida: { name: 'Druida', emoji: '🌿', role: 'Apoyo · naturaleza', desc: 'La fuerza de la naturaleza: curación, resistencia y espinas para quien se atreva a acercarse.', subs: 'Guardián de la Naturaleza 🌿 o Curandero 💚' }
+}
+</script>
+<script src="../../assets/js/site.js" defer></script>
+</body>
+</html>

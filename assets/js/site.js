@@ -1,4 +1,53 @@
 /* Universo MLKD — interações (sem dependências) */
+/* Idiomas (28/10/2026): textos deste arquivo por idioma; a página diz o seu no <html lang> (pt-BR, en, es) */
+var MLKD_LANG = (document.documentElement.lang || 'pt').slice(0, 2)
+var MLKD_TXT = ({
+  pt: {
+    path: 'Seu caminho em Valdória', inRpg: 'No MLKD RPG:', inSv: 'No MLKD Survivor:', playAs: 'Jogar como ', again: 'Refazer',
+    male: ' (masculino)', female: ' (feminina)', obs: 'O Observador', obsTap: 'Tocar no Observador',
+    frag: [
+      'Eu estava lá quando a primeira Runa foi selada. O ar crepitava com o peso de todo o poder do mundo sendo comprimido numa pedra...',
+      'A Floresta era verde, sabia? Verde como esmeralda. Foram os caçadores que a destruíram, homens tolos que tentaram extrair o poder da Runa-Mãe...',
+      'O Faraó de Ashnar era um grande homem. Até decidir que ser grande não bastava: queria ser um deus. O deserto inteiro pagou por sua ambição...',
+      'Sabe por que os mortos não descansam nas Catacumbas? Porque alguém inverteu a Runa da Luz. O que curava agora aprisiona as almas...',
+      'O Rei do Caos... eu o conheci antes. Antes do Trono, antes da fissura. Ele era... não importa. O que ele era já morreu.',
+      'A Torre não foi construída. Ela cresceu. Como uma árvore, mas de pedra e propósito. O Nexus a criou para testar os dignos...',
+      'Cada Runa partida liberta uma maldição diferente. Sangue, Veneno, Fogo, Gelo, Raio, Luz invertida... e uma sétima que não tem nome. Essa é a que mais me preocupa.',
+      'O Golem de Ferro foi o último guardião que a Ordem criou. Deveria nos proteger para sempre. Agora ataca tudo que se move. Irônico, não?'
+    ],
+    reveal: 'Agora o Observador conhece cada movimento seu. Não há mais para onde fugir...'
+  },
+  en: {
+    path: 'Your path in Valdoria', inRpg: 'In MLKD RPG:', inSv: 'In MLKD Survivor:', playAs: 'Play as ', again: 'Try again',
+    male: ' (male)', female: ' (female)', obs: 'The Observer', obsTap: 'Tap the Observer',
+    frag: [
+      'I was there when the first Rune was sealed. The air crackled with the weight of all the world\'s power being pressed into a stone...',
+      'The Forest was green, you know? Green as emerald. It was the hunters who destroyed it, foolish men who tried to draw out the power of the Mother Rune...',
+      'The Pharaoh of Ashnar was a great man. Until he decided that being great wasn\'t enough: he wanted to be a god. The whole desert paid for his ambition...',
+      'Do you know why the dead don\'t rest in the Catacombs? Because someone inverted the Rune of Light. What once healed now imprisons souls...',
+      'The King of Chaos... I knew him before. Before the Throne, before the rift. He was... it doesn\'t matter. What he was is already dead.',
+      'The Tower wasn\'t built. It grew. Like a tree, but of stone and purpose. The Nexus created it to test the worthy...',
+      'Every broken Rune unleashes a different curse. Blood, Poison, Fire, Ice, Lightning, inverted Light... and a seventh that has no name. That one worries me the most.',
+      'The Iron Golem was the last guardian the Order created. It was meant to protect us forever. Now it attacks anything that moves. Ironic, isn\'t it?'
+    ],
+    reveal: 'Now the Observer knows your every move. There\'s nowhere left to run...'
+  },
+  es: {
+    path: 'Tu camino en Valdoria', inRpg: 'En el MLKD RPG:', inSv: 'En MLKD Survivor:', playAs: 'Jugar como ', again: 'Repetir',
+    male: ' (masculino)', female: ' (femenina)', obs: 'El Observador', obsTap: 'Tocar al Observador',
+    frag: [
+      'Yo estaba allí cuando se selló la primera Runa. El aire crepitaba con el peso de todo el poder del mundo comprimido en una piedra...',
+      'El Bosque era verde, ¿sabías? Verde como la esmeralda. Fueron los cazadores quienes lo destruyeron, hombres necios que intentaron extraer el poder de la Runa Madre...',
+      'El Faraón de Ashnar era un gran hombre. Hasta que decidió que ser grande no bastaba: quería ser un dios. Todo el desierto pagó por su ambición...',
+      '¿Sabes por qué los muertos no descansan en las Catacumbas? Porque alguien invirtió la Runa de la Luz. Lo que curaba ahora aprisiona a las almas...',
+      'El Rey del Caos... lo conocí antes. Antes del Trono, antes de la grieta. Él era... no importa. Lo que era ya murió.',
+      'La Torre no fue construida. Creció. Como un árbol, pero de piedra y propósito. El Nexus la creó para poner a prueba a los dignos...',
+      'Cada Runa rota libera una maldición distinta. Sangre, Veneno, Fuego, Hielo, Rayo, Luz invertida... y una séptima que no tiene nombre. Esa es la que más me preocupa.',
+      'El Gólem de Hierro fue el último guardián que creó la Orden. Debía protegernos para siempre. Ahora ataca todo lo que se mueve. Irónico, ¿no?'
+    ],
+    reveal: 'Ahora el Observador conoce cada uno de tus movimientos. Ya no hay a dónde huir...'
+  }
+})[MLKD_LANG === 'en' || MLKD_LANG === 'es' ? MLKD_LANG : 'pt'];
 (function () {
   'use strict'
   var BASE = document.body.getAttribute('data-base') || '' // '../' nas páginas em subpasta
@@ -123,8 +172,8 @@
       tabs.forEach(function (t) { t.setAttribute('aria-selected', t.getAttribute('data-class') === key ? 'true' : 'false') })
       document.getElementById('cs-m').src = BASE + 'assets/img/classe-' + key + '-m.webp'
       document.getElementById('cs-f').src = BASE + 'assets/img/classe-' + key + '-f.webp'
-      document.getElementById('cs-m').alt = c.name + ' (masculino)'
-      document.getElementById('cs-f').alt = c.name + ' (feminina)'
+      document.getElementById('cs-m').alt = c.name + MLKD_TXT.male
+      document.getElementById('cs-f').alt = c.name + MLKD_TXT.female
       document.getElementById('cs-name').textContent = c.emoji + ' ' + c.name
       document.getElementById('cs-role').textContent = c.role
       document.getElementById('cs-desc').textContent = c.desc
@@ -159,10 +208,10 @@
       Object.keys(Q.classes).forEach(function (k) { var s = score[k] || 0; if (s > max || (s === max && Math.random() < .5)) { max = s; best = k } })
       var c = Q.classes[best], g = Math.random() < .5 ? 'm' : 'f'
       body.innerHTML = '<div class="q-result"><img src="' + BASE + 'assets/img/classe-' + best + '-' + g + '.webp" alt="' + c.name + '" width="240" height="240">' +
-        '<div><div class="eyebrow" style="margin:0 0 6px">Seu caminho em Valdória</div><h3>' + c.emoji + ' ' + c.name + '</h3><p>' + c.desc + '</p>' +
-        '<div class="kv"><div><span>No MLKD RPG:</span> ' + c.rpg + '</div><div><span>No MLKD Survivor:</span> ' + c.sv + '</div></div>' +
-        '<div class="btn-row"><a class="btn tg" href="https://t.me/mlkd_rpg_bot" target="_blank" rel="noopener">Jogar como ' + c.name + '</a>' +
-        '<button class="btn ghost" type="button" id="q-again">Refazer</button></div></div></div>'
+        '<div><div class="eyebrow" style="margin:0 0 6px">' + MLKD_TXT.path + '</div><h3>' + c.emoji + ' ' + c.name + '</h3><p>' + c.desc + '</p>' +
+        '<div class="kv"><div><span>' + MLKD_TXT.inRpg + '</span> ' + c.rpg + '</div><div><span>' + MLKD_TXT.inSv + '</span> ' + c.sv + '</div></div>' +
+        '<div class="btn-row"><a class="btn tg" href="https://t.me/mlkd_rpg_bot" target="_blank" rel="noopener">' + MLKD_TXT.playAs + c.name + '</a>' +
+        '<button class="btn ghost" type="button" id="q-again">' + MLKD_TXT.again + '</button></div></div></div>'
       document.getElementById('q-again').addEventListener('click', function () { score = {}; step = 0; render() })
     }
     render()
@@ -174,20 +223,11 @@
   'use strict'
   var BASE = document.body.getAttribute('data-base') || ''
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  var FRAG = [
-    'Eu estava lá quando a primeira Runa foi selada. O ar crepitava com o peso de todo o poder do mundo sendo comprimido numa pedra...',
-    'A Floresta era verde, sabia? Verde como esmeralda. Foram os caçadores que a destruíram, homens tolos que tentaram extrair o poder da Runa-Mãe...',
-    'O Faraó de Ashnar era um grande homem. Até decidir que ser grande não bastava: queria ser um deus. O deserto inteiro pagou por sua ambição...',
-    'Sabe por que os mortos não descansam nas Catacumbas? Porque alguém inverteu a Runa da Luz. O que curava agora aprisiona as almas...',
-    'O Rei do Caos... eu o conheci antes. Antes do Trono, antes da fissura. Ele era... não importa. O que ele era já morreu.',
-    'A Torre não foi construída. Ela cresceu. Como uma árvore, mas de pedra e propósito. O Nexus a criou para testar os dignos...',
-    'Cada Runa partida liberta uma maldição diferente. Sangue, Veneno, Fogo, Gelo, Raio, Luz invertida... e uma sétima que não tem nome. Essa é a que mais me preocupa.',
-    'O Golem de Ferro foi o último guardião que a Ordem criou. Deveria nos proteger para sempre. Agora ataca tudo que se move. Irônico, não?'
-  ]
-  var REVEAL = 'Agora o Observador conhece cada movimento seu. Não há mais para onde fugir...'
+  var FRAG = MLKD_TXT.frag
+  var REVEAL = MLKD_TXT.reveal
   function build(host) {
     var img = BASE + 'assets/img/obs/'
-    host.innerHTML = '<div class="obs-float"><img class="obs-body" src="' + img + 'corpo.webp" alt="O Observador" width="160" height="160">' +
+    host.innerHTML = '<div class="obs-float"><img class="obs-body" src="' + img + 'corpo.webp" alt="' + MLKD_TXT.obs + '" width="160" height="160">' +
       '<div class="obs-eye"><img class="obs-iris" src="' + img + 'iris.webp" alt="" width="23" height="19"><i class="obs-lid"></i></div>' +
       '<img class="obs-reveal" src="' + img + 'revelado.webp" alt="" width="160" height="160" loading="lazy"></div>'
     return host
@@ -242,7 +282,7 @@
       var ms = Math.max(5200, 3500 + t.length * 45) // tempo de leitura: frases longas ficam mais (≈ +2 s nas grandes)
       setTimeout(function () { ro.classList.remove('revealed'); roam.classList.remove('talk'); busy = false }, ms)
     })
-    roam.setAttribute('role', 'button'); roam.setAttribute('aria-label', 'O Observador')
+    roam.setAttribute('role', 'button'); roam.setAttribute('aria-label', MLKD_TXT.obs)
   }
   if (!all.length) return
   var px = window.innerWidth / 2, py = window.innerHeight / 2, last = 0
@@ -272,7 +312,7 @@
   document.querySelectorAll('[data-observer]').forEach(function (o) {
     var q = document.getElementById(o.getAttribute('data-quote') || ''), taps = [], i = Math.floor(Math.random() * FRAG.length)
     var say = function (t) { if (!q) return; q.classList.add('fade'); setTimeout(function () { q.textContent = '“' + t + '”'; q.classList.remove('fade') }, 350) }
-    o.setAttribute('role', 'button'); o.setAttribute('tabindex', '0'); o.setAttribute('aria-label', 'Tocar no Observador')
+    o.setAttribute('role', 'button'); o.setAttribute('tabindex', '0'); o.setAttribute('aria-label', MLKD_TXT.obsTap)
     var act = function () {
       var now = Date.now(); taps = taps.filter(function (t) { return now - t < 1600 }); taps.push(now)
       if (taps.length >= 3 && !o.classList.contains('revealed')) {
@@ -285,4 +325,29 @@
     o.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); act() } })
   })
   aimAll()
+})()
+
+/* ---------- Idioma: bandeirinhas e aviso "também em inglês/espanhol" ---------- */
+;(function () {
+  'use strict'
+  var KEY = 'mlkd-lang'
+  var get = function () { try { return localStorage.getItem(KEY) } catch (e) { return null } }
+  var set = function (v) { try { localStorage.setItem(KEY, v) } catch (e) { /* sem armazenamento */ } }
+  document.querySelectorAll('.lang-switch a, .lang a').forEach(function (a) {
+    a.addEventListener('click', function () { set((a.getAttribute('hreflang') || a.getAttribute('lang') || 'pt').slice(0, 2)) })
+  })
+  // Só nas páginas em português, só se a pessoa nunca escolheu e o navegador não está em português
+  if (MLKD_LANG !== 'pt' || get()) return
+  var nl = (navigator.language || '').slice(0, 2).toLowerCase()
+  if (nl === 'pt' || !nl) return
+  var to = nl === 'es' ? 'es' : 'en'
+  var link = document.querySelector('.lang-switch a[hreflang="' + to + '"]')
+  if (!link) return
+  var bar = document.createElement('div'); bar.className = 'lang-bar'
+  bar.innerHTML = (to === 'es' ? 'Este sitio también está en español. ' : 'This site is also available in English. ') +
+    '<a href="' + link.getAttribute('href') + '">' + (to === 'es' ? 'Ver en español' : 'View in English') + '</a>' +
+    '<button type="button" aria-label="' + (to === 'es' ? 'Cerrar' : 'Close') + '">×</button>'
+  bar.querySelector('a').addEventListener('click', function () { set(to) })
+  bar.querySelector('button').addEventListener('click', function () { set('pt'); bar.remove() })
+  document.body.appendChild(bar)
 })()
